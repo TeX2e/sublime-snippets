@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+flatten(${1:level})
+]]></content>
+	<tabTrigger>flatten(level)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

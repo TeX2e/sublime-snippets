@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+combination(${1:n}) { |${2:c}| ${3:block} }
+]]></content>
+	<tabTrigger>combination(n) { |c| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

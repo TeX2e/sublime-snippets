@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+permutation { |${1:p}| ${2:block} }
+]]></content>
+	<tabTrigger>permutation { |p| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

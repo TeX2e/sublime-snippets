@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+compact!
+]]></content>
+	<tabTrigger>compact!</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

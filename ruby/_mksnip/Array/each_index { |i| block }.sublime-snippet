@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+each_index { |${1:i}| ${2:block} }
+]]></content>
+	<tabTrigger>each_index { |i| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

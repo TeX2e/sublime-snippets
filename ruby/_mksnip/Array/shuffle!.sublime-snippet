@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+shuffle!
+]]></content>
+	<tabTrigger>shuffle!</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+uniq do |${1:item}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>uniq do |item| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

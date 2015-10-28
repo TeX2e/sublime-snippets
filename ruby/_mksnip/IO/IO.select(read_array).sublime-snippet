@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+IO.select(${1:read_array})
+]]></content>
+	<tabTrigger>IO.select(read_array)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+size
+]]></content>
+	<tabTrigger>size</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

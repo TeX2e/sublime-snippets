@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+last(${1:n})
+]]></content>
+	<tabTrigger>last(n)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

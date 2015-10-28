@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+index(${1:obj})
+]]></content>
+	<tabTrigger>index(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+fetch(${1:index})
+]]></content>
+	<tabTrigger>fetch(index)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

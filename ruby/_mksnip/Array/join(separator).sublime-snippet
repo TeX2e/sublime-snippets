@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+join(${1:separator})
+]]></content>
+	<tabTrigger>join(separator)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

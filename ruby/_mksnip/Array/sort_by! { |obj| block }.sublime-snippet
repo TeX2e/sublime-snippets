@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+sort_by! { |${1:obj}| ${2:block} }
+]]></content>
+	<tabTrigger>sort_by! { |obj| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

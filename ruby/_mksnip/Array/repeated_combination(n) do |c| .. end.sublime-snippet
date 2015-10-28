@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+repeated_combination(${1:n}) do |${2:c}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>repeated_combination(n) do |c| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

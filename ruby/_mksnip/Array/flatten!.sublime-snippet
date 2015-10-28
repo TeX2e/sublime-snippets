@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+flatten!
+]]></content>
+	<tabTrigger>flatten!</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

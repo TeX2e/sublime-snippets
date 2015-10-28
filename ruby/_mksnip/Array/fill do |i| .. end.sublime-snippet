@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+fill do |${1:i}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>fill do |i| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

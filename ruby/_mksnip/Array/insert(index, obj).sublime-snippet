@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+insert(${1:index}, ${2:obj})
+]]></content>
+	<tabTrigger>insert(index, obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

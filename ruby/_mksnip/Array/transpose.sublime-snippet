@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+transpose
+]]></content>
+	<tabTrigger>transpose</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+delete_at(${1:index})
+]]></content>
+	<tabTrigger>delete_at(index)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

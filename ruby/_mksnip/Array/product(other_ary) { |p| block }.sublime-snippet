@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+product(${1:other_ary}) { |${2:p}| ${3:block} }
+]]></content>
+	<tabTrigger>product(other_ary) { |p| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

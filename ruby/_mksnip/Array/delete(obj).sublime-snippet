@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+delete(${1:obj})
+]]></content>
+	<tabTrigger>delete(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

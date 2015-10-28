@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+bsearch do |${1:x}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>bsearch do |x| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

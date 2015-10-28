@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+rassoc(${1:obj})
+]]></content>
+	<tabTrigger>rassoc(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>

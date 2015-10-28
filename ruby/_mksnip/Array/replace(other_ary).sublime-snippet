@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+replace(${1:other_ary})
+]]></content>
+	<tabTrigger>replace(other_ary)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Array</description>
+</snippet>
