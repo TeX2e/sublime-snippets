@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+__send__(${1:sym}, ${2:args})
+]]></content>
+	<tabTrigger>__send__(sym, args)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>BasicObject</description>
+</snippet>

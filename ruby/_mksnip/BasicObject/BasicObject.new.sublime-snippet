@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+BasicObject.new
+]]></content>
+	<tabTrigger>BasicObject.new</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>BasicObject</description>
+</snippet>

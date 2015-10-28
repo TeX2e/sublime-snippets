@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+instance_exec(${1:item}) do |${2:item}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>instance_exec(item) do |item| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>BasicObject</description>
+</snippet>

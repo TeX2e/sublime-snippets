@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+def self.singleton_method_undefined(${1:sym})
+	$0
+end
+]]></content>
+	<tabTrigger>Def self.singleton_method_undefined(sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>BasicObject</description>
+</snippet>

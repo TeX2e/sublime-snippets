@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+instance_eval do |${1:obj}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>instance_eval do |obj| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>BasicObject</description>
+</snippet>

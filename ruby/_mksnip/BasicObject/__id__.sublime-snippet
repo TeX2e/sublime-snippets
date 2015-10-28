@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+__id__
+]]></content>
+	<tabTrigger>__id__</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>BasicObject</description>
+</snippet>
