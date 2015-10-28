@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Enumerator.new { |${1:yielder}| ${2:block} }
+]]></content>
+	<tabTrigger>Enumerator.new { |yielder| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerator</description>
+</snippet>

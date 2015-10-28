@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+with_index(${1:offset}) do |${2:args}, ${3:i}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>with_index(offset) do |args, i| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerator</description>
+</snippet>

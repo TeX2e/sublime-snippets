@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+next
+]]></content>
+	<tabTrigger>next</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerator</description>
+</snippet>

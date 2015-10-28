@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+peek_values
+]]></content>
+	<tabTrigger>peek_values</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerator</description>
+</snippet>
