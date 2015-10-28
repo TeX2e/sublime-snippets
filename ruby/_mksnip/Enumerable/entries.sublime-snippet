@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+entries
+]]></content>
+	<tabTrigger>entries</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

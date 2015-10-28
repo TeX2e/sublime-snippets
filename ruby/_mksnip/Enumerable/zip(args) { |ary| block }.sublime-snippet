@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+zip(${1:args}) { |${2:ary}| ${3:block} }
+]]></content>
+	<tabTrigger>zip(args) { |ary| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

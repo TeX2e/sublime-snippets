@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+find_all do |${1:e}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>find_all do |e| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+first(${1:num})
+]]></content>
+	<tabTrigger>first(num)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

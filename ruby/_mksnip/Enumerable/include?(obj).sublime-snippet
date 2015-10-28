@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+include?(${1:obj})
+]]></content>
+	<tabTrigger>include?(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

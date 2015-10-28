@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+partition do |${1:e}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>partition do |e| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

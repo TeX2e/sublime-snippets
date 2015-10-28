@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+max(${1:num})
+]]></content>
+	<tabTrigger>max(num)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+slice_before { |${1:e}| ${2:block} }
+]]></content>
+	<tabTrigger>slice_before { |e| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+drop(${1:num})
+]]></content>
+	<tabTrigger>drop(num)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

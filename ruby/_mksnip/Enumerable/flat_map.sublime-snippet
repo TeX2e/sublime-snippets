@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+flat_map
+]]></content>
+	<tabTrigger>flat_map</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

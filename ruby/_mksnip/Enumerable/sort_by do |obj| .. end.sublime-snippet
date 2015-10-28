@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+sort_by do |${1:obj}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>sort_by do |obj| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

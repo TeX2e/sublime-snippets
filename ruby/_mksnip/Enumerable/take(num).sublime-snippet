@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+take(${1:num})
+]]></content>
+	<tabTrigger>take(num)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

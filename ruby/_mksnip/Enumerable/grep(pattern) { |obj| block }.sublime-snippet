@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+grep(${1:pattern}) { |${2:obj}| ${3:block} }
+]]></content>
+	<tabTrigger>grep(pattern) { |obj| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+min(${1:num}) do |${2:a}, ${3:b}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>min(num) do |a, b| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

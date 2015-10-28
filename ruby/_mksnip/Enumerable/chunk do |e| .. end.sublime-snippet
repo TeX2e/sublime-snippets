@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+chunk do |${1:e}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>chunk do |e| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

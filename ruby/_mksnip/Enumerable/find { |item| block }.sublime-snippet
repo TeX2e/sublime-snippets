@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+find { |${1:item}| ${2:block} }
+]]></content>
+	<tabTrigger>find { |item| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

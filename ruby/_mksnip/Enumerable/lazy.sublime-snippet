@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+lazy
+]]></content>
+	<tabTrigger>lazy</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

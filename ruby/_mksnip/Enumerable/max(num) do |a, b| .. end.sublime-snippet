@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+max(${1:num}) do |${2:a}, ${3:b}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>max(num) do |a, b| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

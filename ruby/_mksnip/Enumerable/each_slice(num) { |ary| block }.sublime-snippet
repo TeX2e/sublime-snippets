@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+each_slice(${1:num}) { |${2:ary}| ${3:block} }
+]]></content>
+	<tabTrigger>each_slice(num) { |ary| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

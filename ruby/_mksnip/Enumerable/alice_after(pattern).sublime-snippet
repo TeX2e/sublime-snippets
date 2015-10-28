@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+alice_after(${1:pattern})
+]]></content>
+	<tabTrigger>alice_after(pattern)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

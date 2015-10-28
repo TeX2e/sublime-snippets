@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+take_while do |${1:ary}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>take_while do |ary| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

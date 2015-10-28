@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+inject { |${1:memo}, ${2:e}| ${3:block} }
+]]></content>
+	<tabTrigger>inject { |memo, e| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+minmax_by { |${1:e}| ${2:block} }
+]]></content>
+	<tabTrigger>minmax_by { |e| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

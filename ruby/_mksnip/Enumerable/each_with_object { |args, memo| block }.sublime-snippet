@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+each_with_object { |${1:args}, ${2:memo}| ${3:block} }
+]]></content>
+	<tabTrigger>each_with_object { |args, memo| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

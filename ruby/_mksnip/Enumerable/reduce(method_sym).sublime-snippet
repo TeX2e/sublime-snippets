@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+reduce(${1:method_sym})
+]]></content>
+	<tabTrigger>reduce(method_sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

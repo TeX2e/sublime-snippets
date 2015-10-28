@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+count(${1:obj})
+]]></content>
+	<tabTrigger>count(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

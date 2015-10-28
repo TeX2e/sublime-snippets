@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+reject { |${1:e}| ${2:block} }
+]]></content>
+	<tabTrigger>reject { |e| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

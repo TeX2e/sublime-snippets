@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+reduce(${1:init}) { |${2:memo}, ${3:e}| ${4:block} }
+]]></content>
+	<tabTrigger>reduce(init) { |memo, e| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

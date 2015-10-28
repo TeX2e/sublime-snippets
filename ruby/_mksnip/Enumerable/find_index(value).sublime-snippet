@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+find_index(${1:value})
+]]></content>
+	<tabTrigger>find_index(value)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

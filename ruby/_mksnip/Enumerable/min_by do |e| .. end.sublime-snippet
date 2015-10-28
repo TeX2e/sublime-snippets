@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+min_by do |${1:e}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>min_by do |e| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

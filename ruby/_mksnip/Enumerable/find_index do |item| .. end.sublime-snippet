@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+find_index do |${1:item}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>find_index do |item| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

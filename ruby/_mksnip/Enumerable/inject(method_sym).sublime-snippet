@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+inject(${1:method_sym})
+]]></content>
+	<tabTrigger>inject(method_sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>

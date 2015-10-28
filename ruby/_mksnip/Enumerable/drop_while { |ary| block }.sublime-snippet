@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+drop_while { |${1:ary}| ${2:block} }
+]]></content>
+	<tabTrigger>drop_while { |ary| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Enumerable</description>
+</snippet>
