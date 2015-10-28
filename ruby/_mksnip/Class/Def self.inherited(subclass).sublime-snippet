@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+def self.inherited(${1:subclass})
+	$0
+end
+]]></content>
+	<tabTrigger>Def self.inherited(subclass)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Class</description>
+</snippet>

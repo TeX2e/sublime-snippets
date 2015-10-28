@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+allocate
+]]></content>
+	<tabTrigger>allocate</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Class</description>
+</snippet>

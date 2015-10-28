@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+Class.new(${1:Object}) do
+	${0:block}
+end
+]]></content>
+	<tabTrigger>Class.new(Object) do .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Class</description>
+</snippet>
