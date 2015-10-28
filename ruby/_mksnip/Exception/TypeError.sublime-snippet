@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+TypeError
+]]></content>
+	<tabTrigger>TypeError</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Exception</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+ArgumentError
+]]></content>
+	<tabTrigger>ArgumentError</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Exception</description>
+</snippet>
