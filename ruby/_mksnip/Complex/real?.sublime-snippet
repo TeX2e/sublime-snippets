@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+real?
+]]></content>
+	<tabTrigger>real?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Complex</description>
+</snippet>

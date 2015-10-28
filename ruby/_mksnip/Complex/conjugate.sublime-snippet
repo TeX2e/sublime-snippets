@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+conjugate
+]]></content>
+	<tabTrigger>conjugate</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Complex</description>
+</snippet>

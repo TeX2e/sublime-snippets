@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+arg
+]]></content>
+	<tabTrigger>arg</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Complex</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+imaginary
+]]></content>
+	<tabTrigger>imaginary</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Complex</description>
+</snippet>

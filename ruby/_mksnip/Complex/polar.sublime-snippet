@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+polar
+]]></content>
+	<tabTrigger>polar</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Complex</description>
+</snippet>

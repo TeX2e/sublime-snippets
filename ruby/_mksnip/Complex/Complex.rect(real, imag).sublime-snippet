@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Complex.rect(${1:real}, ${2:imag})
+]]></content>
+	<tabTrigger>Complex.rect(real, imag)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Complex</description>
+</snippet>

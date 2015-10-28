@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Complex(${1:str})
+]]></content>
+	<tabTrigger>Complex(str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>
