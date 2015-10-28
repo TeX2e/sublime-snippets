@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Dir.glob(${1:pattern})
+]]></content>
+	<tabTrigger>Dir.glob(pattern)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

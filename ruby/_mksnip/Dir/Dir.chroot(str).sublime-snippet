@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Dir.chroot(${1:str})
+]]></content>
+	<tabTrigger>Dir.chroot(str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

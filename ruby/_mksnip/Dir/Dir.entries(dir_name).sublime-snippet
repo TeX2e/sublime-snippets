@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Dir.entries(${1:dir_name})
+]]></content>
+	<tabTrigger>Dir.entries(dir_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

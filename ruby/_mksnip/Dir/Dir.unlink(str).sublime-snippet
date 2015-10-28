@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Dir.unlink(${1:str})
+]]></content>
+	<tabTrigger>Dir.unlink(str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Dir.open(${1:str}) { |${2:dir}| ${3:block} }
+]]></content>
+	<tabTrigger>Dir.open(str) { |dir| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

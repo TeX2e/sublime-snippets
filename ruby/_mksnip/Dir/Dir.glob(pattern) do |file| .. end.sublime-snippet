@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+Dir.glob(${1:pattern}) do |${2:file}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>Dir.glob(pattern) do |file| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Dir.mkdir(${1:str}, ${2:permission})
+]]></content>
+	<tabTrigger>Dir.mkdir(str, permission)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

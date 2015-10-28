@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+Dir.foreach(${1:dir_name}) do |${2:file_name}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>Dir.foreach(dir_name) do |file_name| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

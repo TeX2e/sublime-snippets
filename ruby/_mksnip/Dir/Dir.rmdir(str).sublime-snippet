@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Dir.rmdir(${1:str})
+]]></content>
+	<tabTrigger>Dir.rmdir(str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

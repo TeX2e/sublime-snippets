@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+tell
+]]></content>
+	<tabTrigger>tell</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

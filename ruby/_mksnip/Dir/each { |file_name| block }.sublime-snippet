@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+each { |${1:file_name}| ${2:block} }
+]]></content>
+	<tabTrigger>each { |file_name| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

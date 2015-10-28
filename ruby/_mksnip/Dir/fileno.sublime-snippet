@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+fileno
+]]></content>
+	<tabTrigger>fileno</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

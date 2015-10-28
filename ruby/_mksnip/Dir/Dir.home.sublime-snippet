@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Dir.home
+]]></content>
+	<tabTrigger>Dir.home</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>

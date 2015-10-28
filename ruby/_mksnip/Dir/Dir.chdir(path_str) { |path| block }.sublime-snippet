@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Dir.chdir(${1:path_str}) { |${2:path}| ${3:block} }
+]]></content>
+	<tabTrigger>Dir.chdir(path_str) { |path| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Dir</description>
+</snippet>
