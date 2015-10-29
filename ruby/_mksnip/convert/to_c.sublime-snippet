@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+to_c
+]]></content>
+	<tabTrigger>to_c</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>convert</description>
+</snippet>

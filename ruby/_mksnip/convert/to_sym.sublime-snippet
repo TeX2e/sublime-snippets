@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+to_sym
+]]></content>
+	<tabTrigger>to_sym</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>convert</description>
+</snippet>

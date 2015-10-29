@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+to_r
+]]></content>
+	<tabTrigger>to_r</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>convert</description>
+</snippet>
