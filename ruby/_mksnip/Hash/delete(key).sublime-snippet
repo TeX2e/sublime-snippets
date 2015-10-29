@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+delete(${1:key})
+]]></content>
+	<tabTrigger>delete(key)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

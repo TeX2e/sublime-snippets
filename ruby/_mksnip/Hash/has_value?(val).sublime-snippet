@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+has_value?(${1:val})
+]]></content>
+	<tabTrigger>has_value?(val)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

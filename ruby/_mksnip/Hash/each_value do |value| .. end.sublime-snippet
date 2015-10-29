@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+each_value do |${1:value}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>each_value do |value| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

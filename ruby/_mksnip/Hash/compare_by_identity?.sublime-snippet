@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+compare_by_identity?
+]]></content>
+	<tabTrigger>compare_by_identity?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

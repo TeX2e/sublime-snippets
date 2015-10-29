@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+rehash
+]]></content>
+	<tabTrigger>rehash</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

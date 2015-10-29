@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+merge(${1:other_hash}) { |${2:key}, ${3:oldval}, ${4:newval}| block}
+]]></content>
+	<tabTrigger>merge(other_hash) { |key, oldval, newval| block}</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

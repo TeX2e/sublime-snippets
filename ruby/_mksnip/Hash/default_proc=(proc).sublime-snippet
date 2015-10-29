@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+default_proc = ${1:proc}
+]]></content>
+	<tabTrigger>default_proc=(proc)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

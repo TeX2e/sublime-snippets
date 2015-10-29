@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+replace(${1:other_hash})
+]]></content>
+	<tabTrigger>replace(other_hash)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+member?(${1:key})
+]]></content>
+	<tabTrigger>member?(key)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+values_at(${1:keys})
+]]></content>
+	<tabTrigger>values_at(keys)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+key?(${1:key})
+]]></content>
+	<tabTrigger>key?(key)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

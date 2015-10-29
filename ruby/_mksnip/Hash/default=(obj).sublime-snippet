@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+default = ${1:obj}
+]]></content>
+	<tabTrigger>default=(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

@@ -1,0 +1,53 @@
+---class-method---
+new { |hash, key| block }
+try_convert(obj)
+---instance-method---
+any? { |key, val| block }
+# assoc(obj)
+# clear
+compare_by_identity?
+default
+!default=(obj)
+default_proc
+!default_proc=(proc)
+delete(key)
+delete(key) { |key| block }
+delete_if { |key, value| block }
+each { |key, value| block }
+each_pair { |key, value| block }
+each_key { |key| block }
+each_value { |value| block }
+empty?
+fetch(key, default)
+fetch(key) { |key| block }
+# flatten
+# flatten(level)
+has_key?(key)
+has_value?(val)
+include?(key)
+invert
+keep_if { |key, val| block }
+key(val)
+key?(key)
+keys
+member?(key)
+merge(other_hash)
+merge(other_hash) { |key, oldval, newval| block}
+merge!(other_hash)
+merge!(other_hash) { |key, oldval, newval| block}
+# rassoc(obj)
+rehash
+reject { |key, value| block }
+reject! { |key, value| block }
+replace(other_hash)
+select { |key, val| block }
+select! { |key, val| block }
+shift
+# size
+store(key, val)
+update(other_hash)
+update(other_hash) { |key, oldval, newval| block}
+value?(val)
+values
+values_at(keys)
+---EOF---

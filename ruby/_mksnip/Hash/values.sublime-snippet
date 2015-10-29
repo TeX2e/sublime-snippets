@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+values
+]]></content>
+	<tabTrigger>values</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

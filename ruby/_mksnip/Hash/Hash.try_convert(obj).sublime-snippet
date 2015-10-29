@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Hash.try_convert(${1:obj})
+]]></content>
+	<tabTrigger>Hash.try_convert(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>

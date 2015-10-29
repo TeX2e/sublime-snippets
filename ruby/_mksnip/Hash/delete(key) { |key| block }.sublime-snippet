@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+delete(${1:key}) { |${2:key}| ${3:block} }
+]]></content>
+	<tabTrigger>delete(key) { |key| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Hash</description>
+</snippet>
