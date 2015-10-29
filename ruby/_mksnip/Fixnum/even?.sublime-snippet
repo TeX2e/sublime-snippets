@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+even?
+]]></content>
+	<tabTrigger>even?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Fixnum</description>
+</snippet>

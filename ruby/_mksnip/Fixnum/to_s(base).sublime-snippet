@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+to_s(${1:base})
+]]></content>
+	<tabTrigger>to_s(base)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Fixnum</description>
+</snippet>

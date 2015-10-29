@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+bit_length
+]]></content>
+	<tabTrigger>bit_length</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Fixnum</description>
+</snippet>
