@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+downto(${1:min}) do |${2:i}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>downto(min) do |i| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Integer</description>
+</snippet>

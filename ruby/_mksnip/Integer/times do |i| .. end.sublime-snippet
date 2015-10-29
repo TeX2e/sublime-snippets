@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+times do |${1:i}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>times do |i| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Integer</description>
+</snippet>

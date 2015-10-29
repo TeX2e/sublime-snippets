@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+gcdlcm(${1:int})
+]]></content>
+	<tabTrigger>gcdlcm(int)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Integer</description>
+</snippet>

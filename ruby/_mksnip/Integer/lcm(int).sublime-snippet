@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+lcm(${1:int})
+]]></content>
+	<tabTrigger>lcm(int)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Integer</description>
+</snippet>

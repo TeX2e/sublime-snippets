@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+pred
+]]></content>
+	<tabTrigger>pred</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Integer</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+gcd(${1:int})
+]]></content>
+	<tabTrigger>gcd(int)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Integer</description>
+</snippet>

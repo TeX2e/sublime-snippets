@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+upto(${1:max}) { |${2:i}| ${3:block} }
+]]></content>
+	<tabTrigger>upto(max) { |i| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Integer</description>
+</snippet>
