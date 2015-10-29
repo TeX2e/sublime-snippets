@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+numerator
+]]></content>
+	<tabTrigger>numerator</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Rational</description>
+</snippet>
