@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.realpath(${1:pathname})
+]]></content>
+	<tabTrigger>File.realpath(pathname)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

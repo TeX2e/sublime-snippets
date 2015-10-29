@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.ctime(${1:file_name})
+]]></content>
+	<tabTrigger>File.ctime(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.link(${1:old_name}, ${2:new_name})
+]]></content>
+	<tabTrigger>File.link(old_name, new_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

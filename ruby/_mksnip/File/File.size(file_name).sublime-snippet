@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.size(${1:file_name})
+]]></content>
+	<tabTrigger>File.size(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

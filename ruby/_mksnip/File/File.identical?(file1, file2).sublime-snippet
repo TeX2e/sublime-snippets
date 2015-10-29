@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.identical?(${1:file1}, ${2:file2})
+]]></content>
+	<tabTrigger>File.identical?(file1, file2)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

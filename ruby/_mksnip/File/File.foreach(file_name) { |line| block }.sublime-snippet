@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.foreach(${1:file_name}) { |${2:line}| ${3:block} }
+]]></content>
+	<tabTrigger>File.foreach(file_name) { |line| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

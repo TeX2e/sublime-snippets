@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.socket?(${1:file_name})
+]]></content>
+	<tabTrigger>File.socket?(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

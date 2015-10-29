@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.symlink(${1:old_name}, ${2:new_name})
+]]></content>
+	<tabTrigger>File.symlink(old_name, new_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

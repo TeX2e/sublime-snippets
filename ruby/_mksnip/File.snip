@@ -1,0 +1,113 @@
+---constant---
+# ALT_SEPARATOR
+# PATH_SEPARATOR
+# SEPARATOR
+# Constants
+# APPEND
+# BINARY
+# CREAT
+# DIRECT
+# DSYNC
+# EXCL
+# FNM_CASEFOLD
+# FNM_DOTMATCH
+# FNM_EXTGLOB
+# FNM_NOESCAPE
+# FNM_PATHNAME
+# FNM_SYSCASE
+# LOCK_EX
+# LOCK_NB
+# LOCK_SH
+# LOCK_UN
+# NOATIME
+# NOCTTY
+# NOFOLLOW
+# NONBLOCK
+# NULL
+# RDONLY
+# RDWR
+# RSYNC
+# SYNC
+# TRUNC
+# WRONLY
+---class-method---
+absolute_path(file_name)
+atime(file_name)
+basename(file_name, suffix)
+birthtime(file_name)
+blockdev?(file_name)
+chardev?(file_name)
+chmod(mode_int, file_name)
+chown(owner_int, group_int, file_name)
+ctime(file_name)
+delete(file_names)
+directory?(file_name)
+dirname(file_name)
+executable?(file_name)
+executable_real?(file_name)
+# exist?(file_name)
+expand_path(file_name)
+extname(path)
+file?(file_name)
+fnmatch(pattern, path)
+foreach(file_name) { |line| block }
+ftype(file_name)
+grpowned?(file_name)
+identical?(file1, file2)
+join(path, to, file)
+# lchmod(mode_int, file_name)
+# lchown(owner_int, group_int, file_name)
+link(old_name, new_name)
+lstat(file_name)
+mtime(file_name)
+new(filename, mode)
+open(filename, mode) { |file| block }
+owned?(file_name)
+path(path)
+pipe?(file_name)
+read(file_name)
+readable?(file_name)
+readable_real?(file_name)
+readlink(link_name)
+realdirpath(path_name)
+realpath(pathname)
+rename(old_name, new_name)
+setgid?(file_name)
+setuid?(file_name)
+size(file_name)
+# size?(file_name)
+socket?(file_name)
+split(file_name)
+stat(file_name)
+sticky?(file_name)
+symlink(old_name, new_name)
+symlink?(file_name)
+truncate(file_name, int)
+umask
+umask(int)
+unlink(file_names)
+utime(atime, mtime, file_name)
+world_readable?(file_name)
+world_writable?(file_name)
+writable?(file_name)
+writable_real?(file_name)
+zero?(file_name)
+---instance-method---
+atime
+birthtime
+chmod(mode_int)
+chown(owner_int, group_int)
+ctime
+flock(locking_constant)
+lstat
+mtime
+path
+to_path
+size
+truncate(int)
+---EOF---
+
+
+
+
+

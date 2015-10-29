@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.basename(${1:file_name}, ${2:suffix})
+]]></content>
+	<tabTrigger>File.basename(file_name, suffix)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

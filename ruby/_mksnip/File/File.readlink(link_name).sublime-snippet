@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.readlink(${1:link_name})
+]]></content>
+	<tabTrigger>File.readlink(link_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

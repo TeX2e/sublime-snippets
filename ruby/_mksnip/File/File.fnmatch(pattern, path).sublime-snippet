@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.fnmatch(${1:pattern}, ${2:path})
+]]></content>
+	<tabTrigger>File.fnmatch(pattern, path)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

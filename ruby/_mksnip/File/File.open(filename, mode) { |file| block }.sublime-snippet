@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.open(${1:filename}, ${2:mode}) { |${3:file}| ${4:block} }
+]]></content>
+	<tabTrigger>File.open(filename, mode) { |file| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

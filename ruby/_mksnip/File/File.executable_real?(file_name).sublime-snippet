@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.executable_real?(${1:file_name})
+]]></content>
+	<tabTrigger>File.executable_real?(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

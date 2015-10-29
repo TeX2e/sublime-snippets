@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.readable?(${1:file_name})
+]]></content>
+	<tabTrigger>File.readable?(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

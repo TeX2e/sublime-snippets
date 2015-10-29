@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+flock(${1:locking_constant})
+]]></content>
+	<tabTrigger>flock(locking_constant)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

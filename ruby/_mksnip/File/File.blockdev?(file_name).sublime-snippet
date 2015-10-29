@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.blockdev?(${1:file_name})
+]]></content>
+	<tabTrigger>File.blockdev?(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

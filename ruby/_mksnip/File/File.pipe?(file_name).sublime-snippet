@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.pipe?(${1:file_name})
+]]></content>
+	<tabTrigger>File.pipe?(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

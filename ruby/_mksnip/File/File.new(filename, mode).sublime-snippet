@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.new(${1:filename}, ${2:mode})
+]]></content>
+	<tabTrigger>File.new(filename, mode)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

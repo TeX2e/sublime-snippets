@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.grpowned?(${1:file_name})
+]]></content>
+	<tabTrigger>File.grpowned?(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.world_writable?(${1:file_name})
+]]></content>
+	<tabTrigger>File.world_writable?(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

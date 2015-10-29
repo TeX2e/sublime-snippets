@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.read(${1:file_name})
+]]></content>
+	<tabTrigger>File.read(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

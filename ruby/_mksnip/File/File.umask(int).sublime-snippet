@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.umask(${1:int})
+]]></content>
+	<tabTrigger>File.umask(int)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

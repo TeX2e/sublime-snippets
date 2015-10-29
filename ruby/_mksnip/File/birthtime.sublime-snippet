@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+birthtime
+]]></content>
+	<tabTrigger>birthtime</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.join(${1:path}, ${2:to}, ${3:file})
+]]></content>
+	<tabTrigger>File.join(path, to, file)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

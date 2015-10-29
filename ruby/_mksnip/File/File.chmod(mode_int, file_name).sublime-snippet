@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.chmod(${1:mode_int}, ${2:file_name})
+]]></content>
+	<tabTrigger>File.chmod(mode_int, file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

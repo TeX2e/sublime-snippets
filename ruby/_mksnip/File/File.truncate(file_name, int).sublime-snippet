@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.truncate(${1:file_name}, ${2:int})
+]]></content>
+	<tabTrigger>File.truncate(file_name, int)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

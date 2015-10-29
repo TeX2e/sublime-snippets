@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.absolute_path(${1:file_name})
+]]></content>
+	<tabTrigger>File.absolute_path(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>

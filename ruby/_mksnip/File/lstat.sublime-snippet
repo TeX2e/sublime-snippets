@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+lstat
+]]></content>
+	<tabTrigger>lstat</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>
