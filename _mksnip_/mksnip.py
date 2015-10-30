@@ -10,18 +10,21 @@ class Tokens(object):
 	"""docstring for Tokens"""
 
 	__pos = 0;
-	# __tokens = [Token(), ...]
+	# __elems = [Token(), ...]
 
 	def __init__(self, tokens):
-		self.__tokens = tokens
+		self.__elems = tokens
 
 	@property
-	def tokens(self):
-		return self.__tokens
+	def elems(self):
+		return self.__elems
+
+	def __iter__(self):
+		return self
 
 	def next(self):
 		try:
-			next_val = self.__tokens[self.__pos]
+			next_val = self.__elems[self.__pos]
 		except IndexError, e:
 			raise StopIteration
 		else:
@@ -29,7 +32,7 @@ class Tokens(object):
 			return next_val
 
 	def seek(self):
-		return self.__tokens[self.__pos]
+		return self.__elems[self.__pos]
 
 
 class Parser(object):
@@ -45,14 +48,18 @@ class Parser(object):
 	def tokens(self):
 		return self.__tokens
 
+	# --- iterable ---
+
 	def __iter__(self):
-		return self
+		return self.__tokens
 
 	def next(self):
 		return self.__tokens.next()
 
 	def seek(self):
 		return self.__tokens.seek()
+
+	# --- take token ---
 
 	def tokenize(self):
 		self.__tokens = Tokens(list(self.tokenize_with_gen()))
@@ -61,10 +68,9 @@ class Parser(object):
 	def tokenize_with_gen(self):
 		keywords = {'IF', 'THEN', 'ENDIF', 'FOR', 'NEXT', 'GOSUB', 'RETURN'}
 		token_specification = [
-			('SKIP',    r'\t+'),          # Skip over spaces and tabs
+			('SKIP',    r'\t+|#.*'),      # Skip tabs and Comments
 			('BEGIN',   r'---[-\w]+---'), # Separator
 			('NEWLINE', r'\n+'),          # Line endings
-			('COMMENT', r'#.*'),          # Comment
 			('TAG',     r'!'),
 			('SNIPPET', r'.+'),
 		]
@@ -85,10 +91,63 @@ class Parser(object):
 				yield Token(typ, val, line, match_obj.start() - line_start)
 			pos = match_obj.end()
 			match_obj = get_token(self.__string, pos)
+
 		if pos != len(self.__string):
 			raise RuntimeError('Unexpected character %r on line %d' % (self.__string[pos], line))
 
+		yield Token('EOF', '---EOF---', line, 0)
 
+	# --- parse ---
+
+	# BNF:
+	#   groups ::= Empty | group groups
+	#   group  ::= begin snips
+	#   snips  ::= Empty | snip snips
+	#   snip   ::= tag str | str
+	# 
+	#   tag    ::= '!'
+	#   str    ::= .*
+	# 
+	def parse(self):
+		self.groups()
+		return self
+
+	def groups(self):
+		while True:
+			if self.__tokens.seek().typ == 'BEGIN':
+				self.group()
+			elif self.__tokens.seek().typ == 'EOF':
+				print('eof')
+				break
+			else:
+				print('no separator')
+				break
+
+	def group(self):
+		token = self.__tokens.next()
+
+		snippet_types = {
+			'---constant---', '---class-method---', '---instance-method---', 
+			'---private-method---', '---define-method---'
+		}
+		if token.value in snippet_types:
+			self.snips(token.value)
+		elif token.value == '---EOF---':
+			print('eof')
+		else:
+			print('no separator')
+
+	def snips(self, snippet_type):
+		while self.__tokens.seek().typ == 'SNIPPET':
+			self.snip(snippet_type)
+
+	def snip(self, snippet_type):
+		token = self.__tokens.next()
+		if token.typ == 'SNIPPET':
+			print("snippet: " + token.value)
+		else:
+			print(token)
+		
 
 
 
@@ -113,8 +172,11 @@ statements = '''
 '''
 
 parser = Parser(statements).tokenize()
+parser.parse()
 
-for x in parser:
-	print(x)
+# for x in parser:
+# 	print(x)
 
+# print(parser.next())
+# print(parser.seek())
 
