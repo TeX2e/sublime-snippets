@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+inspect
+]]></content>
+	<tabTrigger>inspect</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

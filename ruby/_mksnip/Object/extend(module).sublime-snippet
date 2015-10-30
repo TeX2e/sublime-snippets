@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+extend(${1:module})
+]]></content>
+	<tabTrigger>extend(module)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

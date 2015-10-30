@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+tap do |${1:x}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>tap do |x| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

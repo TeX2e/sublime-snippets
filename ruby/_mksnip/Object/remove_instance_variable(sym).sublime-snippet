@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+remove_instance_variable(${1:sym})
+]]></content>
+	<tabTrigger>remove_instance_variable(sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

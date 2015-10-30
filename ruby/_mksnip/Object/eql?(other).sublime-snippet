@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+eql?(${1:other})
+]]></content>
+	<tabTrigger>eql?(other)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+ARGV
+]]></content>
+	<tabTrigger>ARGV</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

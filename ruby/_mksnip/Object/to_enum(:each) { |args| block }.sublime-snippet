@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+to_enum(:${1:each}) { |${2:args}| ${3:block} }
+]]></content>
+	<tabTrigger>to_enum(:each) { |args| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+instance_variable_get(${1:sym})
+]]></content>
+	<tabTrigger>instance_variable_get(sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

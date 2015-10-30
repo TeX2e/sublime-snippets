@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+define_singleton_method(${1:sym}) do |${2:arg}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>define_singleton_method(sym) do |arg| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

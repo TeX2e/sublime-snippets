@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+Object.new(${1:size}) do |${2:i}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>Object.new(size) do |i| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+instance_of?(${1:class})
+]]></content>
+	<tabTrigger>instance_of?(class)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

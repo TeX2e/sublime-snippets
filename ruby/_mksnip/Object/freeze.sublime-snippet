@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+freeze
+]]></content>
+	<tabTrigger>freeze</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

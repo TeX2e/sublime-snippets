@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+untrust
+]]></content>
+	<tabTrigger>untrust</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

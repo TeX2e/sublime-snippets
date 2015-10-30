@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+protected_methods
+]]></content>
+	<tabTrigger>protected_methods</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

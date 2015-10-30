@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+singleton_class
+]]></content>
+	<tabTrigger>singleton_class</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

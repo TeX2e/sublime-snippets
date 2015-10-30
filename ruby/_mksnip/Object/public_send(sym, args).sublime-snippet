@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+public_send(${1:sym}, ${2:args})
+]]></content>
+	<tabTrigger>public_send(sym, args)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+respond_to?(${1:sym})
+]]></content>
+	<tabTrigger>respond_to?(sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

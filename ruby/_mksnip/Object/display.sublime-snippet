@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+display
+]]></content>
+	<tabTrigger>display</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

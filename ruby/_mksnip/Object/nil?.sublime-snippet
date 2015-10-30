@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+nil?
+]]></content>
+	<tabTrigger>nil?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>

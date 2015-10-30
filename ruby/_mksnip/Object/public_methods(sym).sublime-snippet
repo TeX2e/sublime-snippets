@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+public_methods(${1:sym})
+]]></content>
+	<tabTrigger>public_methods(sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Object</description>
+</snippet>
