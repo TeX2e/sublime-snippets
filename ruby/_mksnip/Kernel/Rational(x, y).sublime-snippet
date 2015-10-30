@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Rational(${1:x}, ${2:y})
+]]></content>
+	<tabTrigger>Rational(x, y)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

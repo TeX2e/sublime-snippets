@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+srand(${1:seed})
+]]></content>
+	<tabTrigger>srand(seed)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

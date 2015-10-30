@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+sleep(${1:duration})
+]]></content>
+	<tabTrigger>sleep(duration)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

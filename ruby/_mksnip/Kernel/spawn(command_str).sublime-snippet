@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+spawn(${1:command_str})
+]]></content>
+	<tabTrigger>spawn(command_str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

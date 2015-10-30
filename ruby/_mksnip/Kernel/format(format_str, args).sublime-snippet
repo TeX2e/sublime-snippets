@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+format(${1:format_str}, ${2:args})
+]]></content>
+	<tabTrigger>format(format_str, args)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

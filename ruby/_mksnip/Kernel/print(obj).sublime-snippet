@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+print ${1:obj}
+]]></content>
+	<tabTrigger>print(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

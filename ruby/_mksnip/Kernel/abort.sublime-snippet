@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+abort
+]]></content>
+	<tabTrigger>abort</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

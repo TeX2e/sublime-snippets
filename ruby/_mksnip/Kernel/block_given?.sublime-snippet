@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+block_given?
+]]></content>
+	<tabTrigger>block_given?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

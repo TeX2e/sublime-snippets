@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+require_relative(${1:filename})
+]]></content>
+	<tabTrigger>require_relative(filename)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

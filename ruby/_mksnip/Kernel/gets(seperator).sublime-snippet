@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+gets(${1:seperator})
+]]></content>
+	<tabTrigger>gets(seperator)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

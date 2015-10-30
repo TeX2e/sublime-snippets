@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+open(${1:path}, ${2:mode}) { |${3:io}| ${4:block} }
+]]></content>
+	<tabTrigger>open(path, mode) { |io| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

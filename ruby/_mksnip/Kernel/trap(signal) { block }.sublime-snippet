@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+trap(${1:signal}) { ${2:block} }
+]]></content>
+	<tabTrigger>trap(signal) { block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

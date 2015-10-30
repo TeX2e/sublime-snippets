@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+raise(${1:exception}, ${2:str})
+]]></content>
+	<tabTrigger>raise(exception, str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

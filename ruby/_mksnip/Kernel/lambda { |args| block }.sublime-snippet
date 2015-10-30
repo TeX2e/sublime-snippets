@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+lambda { |${1:args}| ${2:block} }
+]]></content>
+	<tabTrigger>lambda { |args| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

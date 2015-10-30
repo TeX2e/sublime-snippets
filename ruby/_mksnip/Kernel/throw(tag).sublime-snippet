@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+throw(${1:tag})
+]]></content>
+	<tabTrigger>throw(tag)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

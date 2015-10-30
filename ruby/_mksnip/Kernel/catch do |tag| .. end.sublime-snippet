@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+catch do |${1:tag}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>catch do |tag| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

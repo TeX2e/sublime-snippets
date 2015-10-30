@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+test(${1:cmd}, ${2:files})
+]]></content>
+	<tabTrigger>test(cmd, files)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+exec(${1:command_str})
+]]></content>
+	<tabTrigger>exec(command_str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

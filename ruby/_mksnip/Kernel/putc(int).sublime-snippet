@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+putc(${1:int})
+]]></content>
+	<tabTrigger>putc(int)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

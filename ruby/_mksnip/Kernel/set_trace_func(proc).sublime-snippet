@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+set_trace_func(${1:proc})
+]]></content>
+	<tabTrigger>set_trace_func(proc)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

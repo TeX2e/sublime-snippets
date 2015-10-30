@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+autoload(${1:module_sym}, ${2:filename})
+]]></content>
+	<tabTrigger>autoload(module_sym, filename)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

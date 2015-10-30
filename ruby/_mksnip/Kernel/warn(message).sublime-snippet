@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+warn(${1:message})
+]]></content>
+	<tabTrigger>warn(message)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

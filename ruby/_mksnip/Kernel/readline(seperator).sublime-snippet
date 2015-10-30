@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+readline(${1:seperator})
+]]></content>
+	<tabTrigger>readline(seperator)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

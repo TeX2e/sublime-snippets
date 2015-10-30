@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+p ${1:obj}
+]]></content>
+	<tabTrigger>p(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+at_exit do
+	${0:block}
+end
+]]></content>
+	<tabTrigger>at_exit do .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

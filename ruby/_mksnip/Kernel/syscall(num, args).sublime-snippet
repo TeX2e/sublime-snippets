@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+syscall(${1:num}, ${2:args})
+]]></content>
+	<tabTrigger>syscall(num, args)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

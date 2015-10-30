@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+global_variables
+]]></content>
+	<tabTrigger>global_variables</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

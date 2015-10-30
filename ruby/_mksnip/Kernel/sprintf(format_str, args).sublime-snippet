@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+sprintf(${1:format_str}, ${2:args})
+]]></content>
+	<tabTrigger>sprintf(format_str, args)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

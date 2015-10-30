@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+callcc do |${1:cont}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>callcc do |cont| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

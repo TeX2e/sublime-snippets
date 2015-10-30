@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+untrace_var(${1:global_var_sym})
+]]></content>
+	<tabTrigger>untrace_var(global_var_sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

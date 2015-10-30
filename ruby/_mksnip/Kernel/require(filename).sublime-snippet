@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+require ${1:filename}
+]]></content>
+	<tabTrigger>require(filename)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

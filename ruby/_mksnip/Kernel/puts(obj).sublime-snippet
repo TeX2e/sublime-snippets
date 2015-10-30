@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+puts ${1:obj}
+]]></content>
+	<tabTrigger>puts(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

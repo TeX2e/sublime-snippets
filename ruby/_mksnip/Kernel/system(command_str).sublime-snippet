@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+system(${1:command_str})
+]]></content>
+	<tabTrigger>system(command_str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+trap(${1:signal}, ${2:command_str})
+]]></content>
+	<tabTrigger>trap(signal, command_str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

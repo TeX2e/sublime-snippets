@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+load(${1:file_name}, ${2:wrap=false})
+]]></content>
+	<tabTrigger>load(file_name, wrap=false)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

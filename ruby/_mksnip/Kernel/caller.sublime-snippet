@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+caller
+]]></content>
+	<tabTrigger>caller</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+trace_var(${1:global_var_sym}, ${2:cmd})
+]]></content>
+	<tabTrigger>trace_var(global_var_sym, cmd)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>

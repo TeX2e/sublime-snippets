@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+autoload?(${1:name})
+]]></content>
+	<tabTrigger>autoload?(name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Kernel</description>
+</snippet>
