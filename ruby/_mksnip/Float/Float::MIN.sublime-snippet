@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Float::MIN
+]]></content>
+	<tabTrigger>Float::MIN</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Float</description>
+</snippet>

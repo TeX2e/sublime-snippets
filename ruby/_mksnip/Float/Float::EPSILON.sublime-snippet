@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Float::EPSILON
+]]></content>
+	<tabTrigger>Float::EPSILON</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Float</description>
+</snippet>

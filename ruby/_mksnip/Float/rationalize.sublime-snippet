@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+rationalize
+]]></content>
+	<tabTrigger>rationalize</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Float</description>
+</snippet>

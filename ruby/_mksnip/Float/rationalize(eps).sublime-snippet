@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+rationalize(${1:eps})
+]]></content>
+	<tabTrigger>rationalize(eps)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Float</description>
+</snippet>

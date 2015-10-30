@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Float::MAX
+]]></content>
+	<tabTrigger>Float::MAX</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Float</description>
+</snippet>

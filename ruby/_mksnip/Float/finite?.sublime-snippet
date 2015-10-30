@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+finite?
+]]></content>
+	<tabTrigger>finite?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Float</description>
+</snippet>
