@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+closed?
+]]></content>
+	<tabTrigger>closed?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

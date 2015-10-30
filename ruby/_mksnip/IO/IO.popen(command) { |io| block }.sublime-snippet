@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+IO.popen(${1:command}) { |${2:io}| ${3:block} }
+]]></content>
+	<tabTrigger>IO.popen(command) { |io| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

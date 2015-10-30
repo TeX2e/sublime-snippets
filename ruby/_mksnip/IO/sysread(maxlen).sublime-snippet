@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+sysread(${1:maxlen})
+]]></content>
+	<tabTrigger>sysread(maxlen)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

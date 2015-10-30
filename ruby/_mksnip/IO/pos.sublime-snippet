@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+pos
+]]></content>
+	<tabTrigger>pos</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+sysseek(${1:offset})
+]]></content>
+	<tabTrigger>sysseek(offset)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

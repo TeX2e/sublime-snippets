@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+each do |${1:line}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>each do |line| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+IO.binread(${1:file_name})
+]]></content>
+	<tabTrigger>IO.binread(file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

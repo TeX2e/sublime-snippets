@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+read_nonblock(${1:maxlen})
+]]></content>
+	<tabTrigger>read_nonblock(maxlen)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

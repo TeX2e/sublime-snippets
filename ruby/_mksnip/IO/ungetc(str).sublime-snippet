@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+ungetc(${1:str})
+]]></content>
+	<tabTrigger>ungetc(str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

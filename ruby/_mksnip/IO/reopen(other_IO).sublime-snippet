@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+reopen(other_I${1:O})
+]]></content>
+	<tabTrigger>reopen(other_IO)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

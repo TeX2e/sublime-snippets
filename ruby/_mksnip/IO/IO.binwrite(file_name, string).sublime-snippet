@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+IO.binwrite(${1:file_name}, ${2:string})
+]]></content>
+	<tabTrigger>IO.binwrite(file_name, string)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

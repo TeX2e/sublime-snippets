@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+internal_encoding
+]]></content>
+	<tabTrigger>internal_encoding</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

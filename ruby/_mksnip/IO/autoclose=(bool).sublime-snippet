@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+autoclose = ${1:bool}
+]]></content>
+	<tabTrigger>autoclose=(bool)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

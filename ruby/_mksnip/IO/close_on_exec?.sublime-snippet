@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+close_on_exec?
+]]></content>
+	<tabTrigger>close_on_exec?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

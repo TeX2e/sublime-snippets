@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+IO.pipe { |${1:read_io}, ${2:write_io}| ${3:block} }
+]]></content>
+	<tabTrigger>IO.pipe { |read_io, write_io| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

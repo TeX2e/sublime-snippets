@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+reopen(${1:path}, ${2:mode_str})
+]]></content>
+	<tabTrigger>reopen(path, mode_str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

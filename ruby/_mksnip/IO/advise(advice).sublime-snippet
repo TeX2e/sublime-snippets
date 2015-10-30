@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+advise(${1:advice})
+]]></content>
+	<tabTrigger>advise(advice)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

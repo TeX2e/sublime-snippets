@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+eof
+]]></content>
+	<tabTrigger>eof</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

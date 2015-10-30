@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+sync = ${1:bool}
+]]></content>
+	<tabTrigger>sync=(bool)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

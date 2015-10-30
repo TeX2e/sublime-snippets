@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+IO.sysopen(${1:path})
+]]></content>
+	<tabTrigger>IO.sysopen(path)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

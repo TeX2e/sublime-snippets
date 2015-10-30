@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+fsync
+]]></content>
+	<tabTrigger>fsync</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

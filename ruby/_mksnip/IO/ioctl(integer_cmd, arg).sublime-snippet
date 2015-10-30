@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+ioctl(${1:integer_cmd}, ${2:arg})
+]]></content>
+	<tabTrigger>ioctl(integer_cmd, arg)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

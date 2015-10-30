@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+write_nonblock(${1:string})
+]]></content>
+	<tabTrigger>write_nonblock(string)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

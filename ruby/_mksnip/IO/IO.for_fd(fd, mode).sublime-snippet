@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+IO.for_fd(${1:fd}, ${2:mode})
+]]></content>
+	<tabTrigger>IO.for_fd(fd, mode)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

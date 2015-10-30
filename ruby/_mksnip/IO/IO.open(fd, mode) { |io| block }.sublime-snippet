@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+IO.open(${1:fd}, ${2:mode}) { |${3:io}| ${4:block} }
+]]></content>
+	<tabTrigger>IO.open(fd, mode) { |io| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

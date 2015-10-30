@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+ungetbyte(${1:str_or_int})
+]]></content>
+	<tabTrigger>ungetbyte(str_or_int)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

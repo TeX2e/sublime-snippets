@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+IO.new(${1:fd}, ${2:mode})
+]]></content>
+	<tabTrigger>IO.new(fd, mode)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

@@ -1,0 +1,92 @@
+---constant---
+# EWOULDBLOCKWaitReadable
+# EWOULDBLOCKWaitWritable
+# SEEK_CUR
+# SEEK_DATA
+# SEEK_END
+# SEEK_HOLE
+# SEEK_SET
+---class-method---
+binread(file_name)
+binwrite(file_name, string)
+copy_stream(src, dst)
+for_fd(fd, mode)
+# foreach(file_name) { |line| block }
+new(fd, mode)
+open(fd, mode) { |io| block }
+pipe { |read_io, write_io| block }
+popen(command) { |io| block }
+read(file_name)
+readlines(file_name)
+select(read_array)
+sysopen(path)
+# try_convert(obj)
+write(name, str)
+---instance-method---
+advise(advice)
+!autoclose=(bool)
+autoclose?
+# binmode
+# bytes
+# chars
+close
+!close_on_exec=(bool)
+close_on_exec?
+close_read
+close_write
+closed?
+codepoints
+each { |line| block }
+each_line { |line| block }
+# each_byte { |byte| block }
+# each_char { |c| block }
+# each_codepoint { |c| block }
+eof
+external_encoding
+fcntl(integer_cmd, arg)
+fdatasync
+fileno
+flush
+fsync
+# getbyte
+# getc
+# gets
+internal_encoding
+ioctl(integer_cmd, arg)
+isatty
+lineno
+!lineno=(int)
+lines
+pid
+pos
+!pos=(int)
+# print(obj)
+# printf(format_str, obj)
+# putc
+# puts(obj)
+read
+read_nonblock(maxlen)
+# readbyte
+# readchar
+readline
+readlines
+readpartial(maxlen)
+reopen(other_IO)
+reopen(path, mode_str)
+rewind
+seek(amount)
+set_encoding(ext_enc)
+stat
+sync
+!sync=(bool)
+sysread(maxlen)
+sysseek(offset)
+syswrite(str)
+tell
+tty?
+ungetbyte(str_or_int)
+ungetc(str)
+write(str)
+write_nonblock(string)
+---EOF---
+

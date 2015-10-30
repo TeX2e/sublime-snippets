@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+close_on_exec = ${1:bool}
+]]></content>
+	<tabTrigger>close_on_exec=(bool)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

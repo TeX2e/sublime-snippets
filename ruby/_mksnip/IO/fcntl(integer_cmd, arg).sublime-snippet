@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+fcntl(${1:integer_cmd}, ${2:arg})
+]]></content>
+	<tabTrigger>fcntl(integer_cmd, arg)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>

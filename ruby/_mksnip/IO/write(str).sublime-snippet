@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+write(${1:str})
+]]></content>
+	<tabTrigger>write(str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>IO</description>
+</snippet>
