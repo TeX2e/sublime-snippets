@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+const_set(${1:sym}, ${2:obj})
+]]></content>
+	<tabTrigger>const_set(sym, obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

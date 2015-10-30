@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+private_method_defined?(${1:sym})
+]]></content>
+	<tabTrigger>private_method_defined?(sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

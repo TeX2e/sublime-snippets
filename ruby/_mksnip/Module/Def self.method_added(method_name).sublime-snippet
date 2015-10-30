@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+def self.method_added(${1:method_name})
+	$0
+end
+]]></content>
+	<tabTrigger>Def self.method_added(method_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

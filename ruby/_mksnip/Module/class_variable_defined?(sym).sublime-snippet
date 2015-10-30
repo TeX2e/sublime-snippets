@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+class_variable_defined?(${1:sym})
+]]></content>
+	<tabTrigger>class_variable_defined?(sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

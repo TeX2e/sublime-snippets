@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+instance_method(${1:sym})
+]]></content>
+	<tabTrigger>instance_method(sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+class_exec do
+	${0:block}
+end
+]]></content>
+	<tabTrigger>class_exec do .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+module_eval { ${1:block} }
+]]></content>
+	<tabTrigger>module_eval { block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

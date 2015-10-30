@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+class_variable_get(${1:sym})
+]]></content>
+	<tabTrigger>class_variable_get(sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

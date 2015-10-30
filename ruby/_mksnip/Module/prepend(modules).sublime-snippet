@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+prepend(${1:modules})
+]]></content>
+	<tabTrigger>prepend(modules)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

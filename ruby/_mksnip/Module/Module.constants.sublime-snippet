@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Module.constants
+]]></content>
+	<tabTrigger>Module.constants</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

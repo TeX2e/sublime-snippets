@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+remove_const :${1:sym}
+]]></content>
+	<tabTrigger>remove_const(:sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

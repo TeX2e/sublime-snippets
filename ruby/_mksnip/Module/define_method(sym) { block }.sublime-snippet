@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+define_method(${1:sym}) { ${2:block} }
+]]></content>
+	<tabTrigger>define_method(sym) { block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

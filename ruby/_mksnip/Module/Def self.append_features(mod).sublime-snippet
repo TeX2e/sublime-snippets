@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+def self.append_features(${1:mod})
+	$0
+end
+]]></content>
+	<tabTrigger>Def self.append_features(mod)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+attr_accessor :${1:symbols}
+]]></content>
+	<tabTrigger>attr_accessor(:symbols)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

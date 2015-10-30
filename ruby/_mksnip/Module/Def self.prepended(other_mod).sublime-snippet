@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+def self.prepended(${1:other_mod})
+	$0
+end
+]]></content>
+	<tabTrigger>Def self.prepended(other_mod)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

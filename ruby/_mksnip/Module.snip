@@ -1,0 +1,65 @@
+---class-method---
+constants
+nesting
+new { |module| block }
+---instance-method--
+ancestors
+# autoload(module_sym, filename)
+# autoload?(name)
+class_eval(str)
+class_exec { block }
+class_variable_defined?(sym)
+class_variable_get(sym)
+class_variable_set(sym, obj)
+class_variables
+const_defined?(sym)
+const_set(sym, obj)
+constants
+include(modules)
+include?(module)
+included_modules
+instance_method(sym)
+instance_methods
+method_defined?(sym)
+module_eval { block }
+module_exec { block }
+name
+prepend(modules)
+private_class_method(sym)
+private_constant(sym)
+private_instance_methods
+private_method_defined?(sym)
+protected_instance_methods
+protected_method_defined?(sym)
+public_class_method(sym)
+public_constant(sym)
+public_instance_method(sym)
+public_instance_methods
+public_method_defined?(sym)
+remove_class_variable(sym)
+singleton_class?
+---private-method---
+!alias_method(:new_name, :old_name)
+!attr_accessor(:symbols)
+!attr_reader(:symbols)
+!attr_writer(:symbols)
+!module_function(:symbols)
+!private
+!protected
+!public
+!remove_const(:sym)
+!remove_method(:sym)
+!undef_method(:sym)
+!using(module)
+define_method(sym) { block }
+refine(klass) { block }
+---define-method---
+self.append_features(mod)
+self.extend_object(obj)
+self.extended(other_mod)
+self.included(mod)
+self.method_added(method_name)
+self.method_removed(method_name)
+self.prepended(other_mod)
+---EOF---
+

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Module.new { |${1:module}| ${2:block} }
+]]></content>
+	<tabTrigger>Module.new { |module| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

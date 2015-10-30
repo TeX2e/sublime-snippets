@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+def self.included(${1:mod})
+	$0
+end
+]]></content>
+	<tabTrigger>Def self.included(mod)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

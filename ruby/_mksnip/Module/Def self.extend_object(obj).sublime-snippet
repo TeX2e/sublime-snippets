@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+def self.extend_object(${1:obj})
+	$0
+end
+]]></content>
+	<tabTrigger>Def self.extend_object(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

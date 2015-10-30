@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+class_variables
+]]></content>
+	<tabTrigger>class_variables</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

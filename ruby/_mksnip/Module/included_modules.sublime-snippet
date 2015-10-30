@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+included_modules
+]]></content>
+	<tabTrigger>included_modules</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

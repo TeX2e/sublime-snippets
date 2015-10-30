@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+module_function :${1:symbols}
+]]></content>
+	<tabTrigger>module_function(:symbols)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

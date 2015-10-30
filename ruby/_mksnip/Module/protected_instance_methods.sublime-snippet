@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+protected_instance_methods
+]]></content>
+	<tabTrigger>protected_instance_methods</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

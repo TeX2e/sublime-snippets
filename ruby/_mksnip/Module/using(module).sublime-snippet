@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+using ${1:module}
+]]></content>
+	<tabTrigger>using(module)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+class_variable_set(${1:sym}, ${2:obj})
+]]></content>
+	<tabTrigger>class_variable_set(sym, obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>

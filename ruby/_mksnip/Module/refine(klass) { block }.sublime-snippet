@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+refine(${1:klass}) { ${2:block} }
+]]></content>
+	<tabTrigger>refine(klass) { block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Module</description>
+</snippet>
