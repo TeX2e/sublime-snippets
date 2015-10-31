@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+abort_on_exception
+]]></content>
+	<tabTrigger>abort_on_exception</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

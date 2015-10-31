@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Thread.pass
+]]></content>
+	<tabTrigger>Thread.pass</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

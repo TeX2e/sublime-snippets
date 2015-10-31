@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+raise(${1:str})
+]]></content>
+	<tabTrigger>raise(str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

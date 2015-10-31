@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Thread.exclusive { ${1:block} }
+]]></content>
+	<tabTrigger>Thread.exclusive { block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

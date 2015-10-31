@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+Thread.start(${1:args}) do|${2:args}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>Thread.start(args) do|args| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

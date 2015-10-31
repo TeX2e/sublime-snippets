@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+backtrace
+]]></content>
+	<tabTrigger>backtrace</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

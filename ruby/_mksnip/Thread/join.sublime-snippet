@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+join
+]]></content>
+	<tabTrigger>join</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

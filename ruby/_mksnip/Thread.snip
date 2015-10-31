@@ -1,0 +1,51 @@
+---class-method---
+# DEBUG
+# DEBUG=(num)
+# abort_on_exception
+# abort_on_exception=(bool)
+current
+exclusive { block }
+exit
+fork(args) {|args| block }
+handle_interrupt(hash) { block }
+kill(thread)
+list
+main
+new { block }
+new(args) { |args| block }
+pass
+pending_interrupt?(error=nil)
+start(args) {|args| block }
+stop
+---instance-method---
+abort_on_exception
+!abort_on_exception=(bool)
+add_trace_func(proc)
+alive?
+backtrace
+backtrace_locations(args)
+exit
+group
+join
+join(limit)
+key?(sym)
+keys
+kill
+pending_interrupt?(error=nil)
+priority
+!priority=(int)
+raise(str)
+raise(exception, str)
+run
+safe_level
+# set_trace_func(proc)
+status
+stop?
+terminate
+thread_variable?(key)
+thread_variable_get(key)
+thread_variable_set(key, value)
+thread_variables
+value
+wakeup
+---EOF---

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+add_trace_func(${1:proc})
+]]></content>
+	<tabTrigger>add_trace_func(proc)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

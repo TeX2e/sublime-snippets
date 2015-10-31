@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+kill
+]]></content>
+	<tabTrigger>kill</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

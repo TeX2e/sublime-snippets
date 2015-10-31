@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+key?(${1:sym})
+]]></content>
+	<tabTrigger>key?(sym)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+backtrace_locations(${1:args})
+]]></content>
+	<tabTrigger>backtrace_locations(args)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

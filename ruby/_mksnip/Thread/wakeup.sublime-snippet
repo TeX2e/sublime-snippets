@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+wakeup
+]]></content>
+	<tabTrigger>wakeup</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

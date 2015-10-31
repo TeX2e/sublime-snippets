@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+safe_level
+]]></content>
+	<tabTrigger>safe_level</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

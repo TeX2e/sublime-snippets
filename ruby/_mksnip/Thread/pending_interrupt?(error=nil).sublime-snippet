@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+pending_interrupt?(${1:error=nil})
+]]></content>
+	<tabTrigger>pending_interrupt?(error=nil)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

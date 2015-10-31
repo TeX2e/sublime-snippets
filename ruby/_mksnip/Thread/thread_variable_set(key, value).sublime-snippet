@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+thread_variable_set(${1:key}, ${2:value})
+]]></content>
+	<tabTrigger>thread_variable_set(key, value)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

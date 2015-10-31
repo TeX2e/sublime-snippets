@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+Thread.handle_interrupt(${1:hash}) do
+	${0:block}
+end
+]]></content>
+	<tabTrigger>Thread.handle_interrupt(hash) do .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

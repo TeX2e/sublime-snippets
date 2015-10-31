@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+thread_variable_get(${1:key})
+]]></content>
+	<tabTrigger>thread_variable_get(key)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>

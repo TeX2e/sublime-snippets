@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+priority = ${1:int}
+]]></content>
+	<tabTrigger>priority=(int)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Thread</description>
+</snippet>
