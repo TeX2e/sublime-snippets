@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Time.new(${1:year}, ${2:month=nil}, ${3:day=nil}, ${4:hour=nil}, ${5:min=nil}, ${6:sec=nil}, ${7:utc_offset=nil})
+]]></content>
+	<tabTrigger>Time.new(year, month=nil, day=nil, hour=nil, min=nil, sec=nil, utc_offset=nil)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Time</description>
+</snippet>

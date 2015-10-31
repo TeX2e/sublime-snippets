@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+hour
+]]></content>
+	<tabTrigger>hour</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Time</description>
+</snippet>

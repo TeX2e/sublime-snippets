@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+wednesday?
+]]></content>
+	<tabTrigger>wednesday?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Time</description>
+</snippet>
