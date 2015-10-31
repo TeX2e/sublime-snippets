@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+divmod(${1:num})
+]]></content>
+	<tabTrigger>divmod(num)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

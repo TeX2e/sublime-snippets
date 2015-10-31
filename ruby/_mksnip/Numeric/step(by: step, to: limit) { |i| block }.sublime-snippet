@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+step(by: ${1:step}, to: ${2:limit}) { |${3:i}| ${4:block} }
+]]></content>
+	<tabTrigger>step(by: step, to: limit) { |i| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

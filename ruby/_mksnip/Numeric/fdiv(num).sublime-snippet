@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+fdiv(${1:num})
+]]></content>
+	<tabTrigger>fdiv(num)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

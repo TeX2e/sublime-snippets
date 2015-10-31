@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+modulo(${1:num})
+]]></content>
+	<tabTrigger>modulo(num)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

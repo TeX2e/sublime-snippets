@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+round
+]]></content>
+	<tabTrigger>round</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

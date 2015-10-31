@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+remainder(${1:num})
+]]></content>
+	<tabTrigger>remainder(num)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

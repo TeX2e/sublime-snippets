@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+zero?
+]]></content>
+	<tabTrigger>zero?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

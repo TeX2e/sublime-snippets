@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+ceil
+]]></content>
+	<tabTrigger>ceil</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+round(${1:ndigits})
+]]></content>
+	<tabTrigger>round(ndigits)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

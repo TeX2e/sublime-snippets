@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+denominator
+]]></content>
+	<tabTrigger>denominator</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

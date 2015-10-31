@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+floor
+]]></content>
+	<tabTrigger>floor</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

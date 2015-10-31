@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+quo(${1:num})
+]]></content>
+	<tabTrigger>quo(num)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>

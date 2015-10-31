@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+coerce(${1:num})
+]]></content>
+	<tabTrigger>coerce(num)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Numeric</description>
+</snippet>
