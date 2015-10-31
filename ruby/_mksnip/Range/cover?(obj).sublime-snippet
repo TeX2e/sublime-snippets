@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+cover?(${1:obj})
+]]></content>
+	<tabTrigger>cover?(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Range</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+member?(${1:obj})
+]]></content>
+	<tabTrigger>member?(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Range</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Range.new(${1:begin}, ${2:end}, ${3:exclude_end=false})
+]]></content>
+	<tabTrigger>Range.new(begin, end, exclude_end=false)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Range</description>
+</snippet>
