@@ -1,54 +1,10 @@
 
-from __future__ import print_function
 import os
-import sys
-import collections
 import re
 import textwrap
 
-
-class Error(object):
-	"""docstring for Error"""
-	@staticmethod
-	def message(file_name, line_num, pos, message):
-		return "%s:%d:%d: error: %s" % (file_name, line_num, pos, message)
-
-	@staticmethod
-	def print_error(message):
-		print(message, file=sys.stderr)
-
-
-Token = collections.namedtuple('Token', ['typ', 'value', 'line', 'column'])
-
-
-class Tokens(object):
-	"""docstring for Tokens"""
-
-	__pos = 0;
-	# __elems = [Token(), ...]
-
-	def __init__(self, tokens):
-		self.__elems = tokens
-
-	@property
-	def elems(self):
-		return self.__elems
-
-	def __iter__(self):
-		return self
-
-	def next(self):
-		try:
-			next_val = self.__elems[self.__pos]
-		except IndexError:
-			raise StopIteration
-		else:
-			self.__pos += 1
-			return next_val
-
-	def seek(self):
-		return self.__elems[self.__pos]
-
+from Error import (Error)
+from Token import (Token, Tokens)
 
 class Parser(object):
 	"""docstring for Parser"""
