@@ -1,8 +1,10 @@
 
 from __future__ import print_function
+import os
 import sys
 import collections
 import re
+import textwrap
 
 
 class Error(object):
@@ -14,7 +16,7 @@ class Error(object):
 	@staticmethod
 	def print_error(message):
 		print(message, file=sys.stderr)
-		
+
 
 Token = collections.namedtuple('Token', ['typ', 'value', 'line', 'column'])
 
@@ -55,7 +57,7 @@ class Parser(object):
 	# __filename = ""
 	# __tokens = Tokens( [Token(), ...] )
 
-	def __init__(self, string, filename="input"):
+	def __init__(self, string, filename='input'):
 		self.__code = string;
 		self.__filename = filename;
 
@@ -129,15 +131,16 @@ class Parser(object):
 
 	def groups(self):
 		while True:
-			if self.__tokens.seek().typ == 'BEGIN':
+			next_token = self.__tokens.seek()
+			if next_token.typ == 'BEGIN':
 				self.group()
-			elif self.__tokens.seek().typ == 'EOF':
-				print('[Finished]')
+			elif next_token.typ == 'EOF':
+				print('[Finished %s]' % self.__filename)
 				break
 			else:
-				token = self.__tokens.seek()
 				Error.print_error(Error.message(
-					self.__filename, token.line, token.column, 'no separator'
+					self.__filename, next_token.line, next_token.column, 
+					'not separator: %s' % next_token.value
 				))
 				break
 
@@ -153,46 +156,118 @@ class Parser(object):
 		elif token.value == '---EOF---':
 			print('eof')
 		else:
-			# print('invalid separator: ' + token.value)
 			Error.print_error(Error.message(
 				self.__filename, token.line, token.column, 'invalid separator: %s' % token.value
 			))
 
 	def snips(self, snippet_type):
-		while self.__tokens.seek().typ == 'SNIPPET':
-			self.snip(snippet_type)
+		while True:
+			next_token = self.__tokens.seek()
+			if next_token.typ == 'SNIPPET':
+				self.snip(snippet_type)
+			elif next_token.typ == 'TAG':
+				self.__tokens.next()
+				self.snip(snippet_type, 'TAG')
+			else:
+				break
 
-	def snip(self, snippet_type):
+	def snip(self, snippet_type, tag=''):
 		token = self.__tokens.next()
 		if token.typ == 'SNIPPET':
-			print('snippet: ' + token.value)
+			print('snippet: (%s) %s %s' % (snippet_type, token.value, tag))
+			# invoke function that make snippet file
+			Snippet.mkfile(
+				filename=('%s.sublime-snippet' % (token.value)), 
+				snippet_type=snippet_type, 
+				value=token.value, 
+				tag=tag
+			)
 		else:
-			print(token)
+			Error.print_error(Error.message(
+				self.__filename, token.line, token.column, 'not snippet: %s' % token.value
+			))
 		
 
+class Snippet(object):
+	"""docstring for Snippet"""
 
+	dir = '../tmp'
+
+	@classmethod
+	def mkfile(self, filename, snippet_type, value, tag=''):
+		if not os.path.exists(self.dir):
+			os.mkdir(self.dir)
+
+		path = '%s/%s' % (self.dir, filename)
+		with open(path, 'w') as f:
+			f.write(
+				Snippet.format(
+					snippet=value, trigger=value, desc=os.path.basename(self.dir)
+				)
+			)
+	
+	@staticmethod
+	def format(snippet, trigger, desc):
+		abstract_snippet = '''
+			<snippet>
+				<content><![CDATA[
+			{snippet}
+			]]></content>
+				<tabTrigger>{trigger}</tabTrigger>
+				<scope>source.ruby</scope>
+				<description>{desc}</description>
+			</snippet>
+		'''
+		concrete_snippet = textwrap.dedent(
+			abstract_snippet.format(
+				snippet=Snippet.replace_variable(snippet), 
+				trigger=trigger, 
+				desc=desc)
+		)
+		return concrete_snippet
+
+	@staticmethod
+	def replace_variable(snippet_str):
+		count_up = VariableCountUp()
+		
+		return re.sub(
+			r'([a-zA-Z_][a-z_=0-9]*)(?=[,)\|])', 
+			count_up.wrap_variable,
+			snippet_str
+		)
+
+
+class VariableCountUp(object):
+	"""docstring for SnippetHelper"""
+	def __init__(self):
+		self.cnt = 1
+
+	def wrap_variable(self, match_obj):
+		snippet_str = '${%d:%s}' % (self.cnt, match_obj.group())
+		self.cnt += 1
+		return snippet_str
+		
 
 
 statements = '''
 	---class-method---
-	# new(array)
-	new(size) { |i| block }
-	# try_convert(obj)
+	new
+	try_convert(obj)
 	---instance-method---
-	assoc(obj)
-	at(index)
-	# bsearch { |x| block }
-	# clear
-	# collect { |e| block }
-	# collect
-	collect! { |e| block }
-	collect!
-	combination(n) { |c| block }
-	combination(n)
-	compact
-	compact!
+	__id__
+	object_id
+	send(sym, args)
+	__send__(sym, args)
+	equal?(other)
+	instance_eval(string)
+	instance_eval { |obj| block }
+	instance_exec(item) { |item| block }
+	---define-method---
+	method_missing(method, args, block)
+	self.singleton_method_added(id)
+	self.singleton_method_removed(sym)
+	self.singleton_method_undefined(sym)
 	---EOF---
-	hoge
 '''
 
 parser = Parser(statements).tokenize()
