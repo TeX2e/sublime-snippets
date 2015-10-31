@@ -1,7 +1,20 @@
 
+from __future__ import print_function
+import sys
 import collections
 import re
 
+
+class Error(object):
+	"""docstring for Error"""
+	@staticmethod
+	def message(file_name, line_num, pos, message):
+		return "%s:%d:%d: error: %s" % (file_name, line_num, pos, message)
+
+	@staticmethod
+	def print_error(message):
+		print(message, file=sys.stderr)
+		
 
 Token = collections.namedtuple('Token', ['typ', 'value', 'line', 'column'])
 
@@ -25,7 +38,7 @@ class Tokens(object):
 	def next(self):
 		try:
 			next_val = self.__elems[self.__pos]
-		except IndexError, e:
+		except IndexError:
 			raise StopIteration
 		else:
 			self.__pos += 1
@@ -38,11 +51,13 @@ class Tokens(object):
 class Parser(object):
 	"""docstring for Parser"""
 
-	# __string = ""
+	# __code = ""
+	# __filename = ""
 	# __tokens = Tokens( [Token(), ...] )
 
-	def __init__(self, string):
-		self.__string = string;
+	def __init__(self, string, filename="input"):
+		self.__code = string;
+		self.__filename = filename;
 
 	@property
 	def tokens(self):
@@ -78,7 +93,7 @@ class Parser(object):
 		get_token = re.compile(tok_regex).match
 		line = 1
 		pos = line_start = 0
-		match_obj = get_token(self.__string)
+		match_obj = get_token(self.__code)
 		while match_obj is not None:
 			typ = match_obj.lastgroup
 			if typ == 'NEWLINE':
@@ -90,10 +105,10 @@ class Parser(object):
 					typ = val
 				yield Token(typ, val, line, match_obj.start() - line_start)
 			pos = match_obj.end()
-			match_obj = get_token(self.__string, pos)
+			match_obj = get_token(self.__code, pos)
 
-		if pos != len(self.__string):
-			raise RuntimeError('Unexpected character %r on line %d' % (self.__string[pos], line))
+		if pos != len(self.__code):
+			raise RuntimeError('Unexpected character %r on line %d' % (self.__code[pos], line))
 
 		yield Token('EOF', '---EOF---', line, 0)
 
@@ -117,10 +132,13 @@ class Parser(object):
 			if self.__tokens.seek().typ == 'BEGIN':
 				self.group()
 			elif self.__tokens.seek().typ == 'EOF':
-				print('eof')
+				print('[Finished]')
 				break
 			else:
-				print('no separator')
+				token = self.__tokens.seek()
+				Error.print_error(Error.message(
+					self.__filename, token.line, token.column, 'no separator'
+				))
 				break
 
 	def group(self):
@@ -135,7 +153,10 @@ class Parser(object):
 		elif token.value == '---EOF---':
 			print('eof')
 		else:
-			print('no separator')
+			# print('invalid separator: ' + token.value)
+			Error.print_error(Error.message(
+				self.__filename, token.line, token.column, 'invalid separator: %s' % token.value
+			))
 
 	def snips(self, snippet_type):
 		while self.__tokens.seek().typ == 'SNIPPET':
@@ -144,10 +165,11 @@ class Parser(object):
 	def snip(self, snippet_type):
 		token = self.__tokens.next()
 		if token.typ == 'SNIPPET':
-			print("snippet: " + token.value)
+			print('snippet: ' + token.value)
 		else:
 			print(token)
 		
+
 
 
 
@@ -169,10 +191,14 @@ statements = '''
 	combination(n)
 	compact
 	compact!
+	---EOF---
+	hoge
 '''
 
 parser = Parser(statements).tokenize()
 parser.parse()
+
+
 
 # for x in parser:
 # 	print(x)
