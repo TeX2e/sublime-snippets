@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+curry(${1:arity})
+]]></content>
+	<tabTrigger>curry(arity)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Proc</description>
+</snippet>

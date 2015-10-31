@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+arity
+]]></content>
+	<tabTrigger>arity</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Proc</description>
+</snippet>

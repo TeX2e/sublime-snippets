@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+call(${1:params})
+]]></content>
+	<tabTrigger>call(params)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Proc</description>
+</snippet>

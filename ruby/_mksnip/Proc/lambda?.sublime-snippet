@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+lambda?
+]]></content>
+	<tabTrigger>lambda?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Proc</description>
+</snippet>

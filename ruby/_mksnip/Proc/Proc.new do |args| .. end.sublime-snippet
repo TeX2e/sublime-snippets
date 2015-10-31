@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+Proc.new do |${1:args}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>Proc.new do |args| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Proc</description>
+</snippet>

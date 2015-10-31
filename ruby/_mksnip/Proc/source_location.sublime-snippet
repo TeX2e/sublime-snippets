@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+source_location
+]]></content>
+	<tabTrigger>source_location</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Proc</description>
+</snippet>
