@@ -6,6 +6,34 @@ import textwrap
 from Error import (Error)
 from Token import (Token, Tokens)
 
+
+# reading:
+#   A <---- B   :  A depends on B
+#   PascalCase  :  class name
+#   snake_case  :  method or field
+# 
+# flow:
+# 
+#     Parser
+#       |
+#       | __init__(code, file_name)
+#       V
+#     parser
+#       |
+#       | tokenize() <----Tokens <----Token
+#       V
+#     parser.tokens (tokenized result set in parser.tokens)
+#       |
+#       | parse() <----Error
+#       V
+#     Snippet
+#       |
+#       | mkfile(..) <----SnippetHelper <----VariableCountUp
+#       V
+#     :write the snippet in lang-dir/*.sublime-snippet
+#     
+
+
 class Parser(object):
 	"""docstring for Parser"""
 
@@ -157,11 +185,23 @@ class Snippet(object):
 		path = '%s/%s' % (self.dir, filename)
 		with open(path, 'w') as f:
 			f.write(
-				Snippet.format(
+				SnippetHelper.format(
 					snippet=value, trigger=value, desc=os.path.basename(self.dir)
 				)
 			)
-	
+
+
+class SnippetHelper(object):
+	@staticmethod
+	def replace_variable(snippet_str):
+		count_up = VariableCountUp()
+		
+		return re.sub(
+			r'([a-zA-Z_][a-z_=0-9]*)(?=[,)\|])', 
+			count_up.wrap_variable,
+			snippet_str
+		)
+
 	@staticmethod
 	def format(snippet, trigger, desc):
 		abstract_snippet = '''
@@ -176,21 +216,11 @@ class Snippet(object):
 		'''
 		concrete_snippet = textwrap.dedent(
 			abstract_snippet.format(
-				snippet=Snippet.replace_variable(snippet), 
+				snippet=SnippetHelper.replace_variable(snippet), 
 				trigger=trigger, 
 				desc=desc)
 		)
 		return concrete_snippet
-
-	@staticmethod
-	def replace_variable(snippet_str):
-		count_up = VariableCountUp()
-		
-		return re.sub(
-			r'([a-zA-Z_][a-z_=0-9]*)(?=[,)\|])', 
-			count_up.wrap_variable,
-			snippet_str
-		)
 
 
 class VariableCountUp(object):
