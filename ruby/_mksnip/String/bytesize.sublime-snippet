@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+bytesize
+]]></content>
+	<tabTrigger>bytesize</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

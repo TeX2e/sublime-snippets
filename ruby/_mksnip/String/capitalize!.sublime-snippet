@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+capitalize!
+]]></content>
+	<tabTrigger>capitalize!</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

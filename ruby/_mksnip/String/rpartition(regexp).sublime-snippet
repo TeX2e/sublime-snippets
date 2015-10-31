@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+rpartition(${1:regexp})
+]]></content>
+	<tabTrigger>rpartition(regexp)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

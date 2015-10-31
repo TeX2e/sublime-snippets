@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+rjust(${1:width})
+]]></content>
+	<tabTrigger>rjust(width)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

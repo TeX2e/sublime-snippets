@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+setbyte(${1:index}, ${2:int})
+]]></content>
+	<tabTrigger>setbyte(index, int)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

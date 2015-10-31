@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+tr_s!(${1:from_str}, ${2:to_str})
+]]></content>
+	<tabTrigger>tr_s!(from_str, to_str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+squeeze!
+]]></content>
+	<tabTrigger>squeeze!</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

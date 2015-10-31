@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+end_with?(${1:str})
+]]></content>
+	<tabTrigger>end_with?(str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

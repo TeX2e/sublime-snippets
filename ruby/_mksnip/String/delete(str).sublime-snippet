@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+delete(${1:str})
+]]></content>
+	<tabTrigger>delete(str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

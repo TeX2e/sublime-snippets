@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+upto(${1:other_str}) do |${2:str}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>upto(other_str) do |str| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

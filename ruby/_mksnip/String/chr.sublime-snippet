@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+chr
+]]></content>
+	<tabTrigger>chr</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

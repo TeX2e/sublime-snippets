@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+codepoints { |${1:int}| ${2:block} }
+]]></content>
+	<tabTrigger>codepoints { |int| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+split(${1:regexp})
+]]></content>
+	<tabTrigger>split(regexp)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

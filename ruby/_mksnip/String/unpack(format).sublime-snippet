@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+unpack(${1:format})
+]]></content>
+	<tabTrigger>unpack(format)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

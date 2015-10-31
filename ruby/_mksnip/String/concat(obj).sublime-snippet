@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+concat(${1:obj})
+]]></content>
+	<tabTrigger>concat(obj)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

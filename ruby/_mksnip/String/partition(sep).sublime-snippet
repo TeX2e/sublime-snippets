@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+partition(${1:sep})
+]]></content>
+	<tabTrigger>partition(sep)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

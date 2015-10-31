@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+replace(${1:other_str})
+]]></content>
+	<tabTrigger>replace(other_str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

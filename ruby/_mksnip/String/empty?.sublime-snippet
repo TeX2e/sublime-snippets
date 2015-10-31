@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+empty?
+]]></content>
+	<tabTrigger>empty?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

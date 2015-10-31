@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+crypt(${1:salt_str})
+]]></content>
+	<tabTrigger>crypt(salt_str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

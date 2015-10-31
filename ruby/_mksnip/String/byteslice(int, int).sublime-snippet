@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+byteslice(${1:int}, ${2:int})
+]]></content>
+	<tabTrigger>byteslice(int, int)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

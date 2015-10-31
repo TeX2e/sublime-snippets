@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+rstrip!
+]]></content>
+	<tabTrigger>rstrip!</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+ascii_only?
+]]></content>
+	<tabTrigger>ascii_only?</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

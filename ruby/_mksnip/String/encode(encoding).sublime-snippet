@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+encode(${1:encoding})
+]]></content>
+	<tabTrigger>encode(encoding)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

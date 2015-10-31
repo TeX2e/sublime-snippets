@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+gsub(${1:pattern}) do |${2:match}|
+	${0:block}
+end
+]]></content>
+	<tabTrigger>gsub(pattern) do |match| .. end</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

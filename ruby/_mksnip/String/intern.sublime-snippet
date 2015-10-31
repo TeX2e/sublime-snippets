@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+intern
+]]></content>
+	<tabTrigger>intern</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

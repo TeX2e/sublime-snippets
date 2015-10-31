@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+scan(${1:pattern}) { |${2:match}| ${3:block} }
+]]></content>
+	<tabTrigger>scan(pattern) { |match| block }</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

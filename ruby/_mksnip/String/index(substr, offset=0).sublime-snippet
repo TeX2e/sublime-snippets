@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+index(${1:substr}, ${2:offset=0})
+]]></content>
+	<tabTrigger>index(substr, offset=0)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

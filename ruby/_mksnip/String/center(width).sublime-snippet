@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+center(${1:width})
+]]></content>
+	<tabTrigger>center(width)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+count(${1:str})
+]]></content>
+	<tabTrigger>count(str)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>

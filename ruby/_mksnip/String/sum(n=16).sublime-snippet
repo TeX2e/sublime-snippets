@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+sum(${1:n=16})
+]]></content>
+	<tabTrigger>sum(n=16)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>String</description>
+</snippet>
