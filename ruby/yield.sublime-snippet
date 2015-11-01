@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[yield]]></content>
+    <tabTrigger>yield</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>yield</description>
+</snippet>
