@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[
----private-method---
-]]></content>
-	<tabTrigger>---private-method---</tabTrigger>
-	<scope>source.ruby</scope>
-	<description>Module</description>
-</snippet>

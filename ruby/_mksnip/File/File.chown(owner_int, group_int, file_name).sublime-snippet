@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+File.chown(${1:owner_int}, ${2:group_int}, ${3:file_name})
+]]></content>
+	<tabTrigger>File.chown(owner_int, group_int, file_name)</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>File</description>
+</snippet>
