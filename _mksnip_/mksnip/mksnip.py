@@ -41,9 +41,10 @@ class Parser(object):
 	# __filename = ""
 	# __tokens = Tokens( [Token(), ...] )
 
-	def __init__(self, string, filename='input'):
-		self.__code = string;
-		self.__filename = filename;
+	def __init__(self, string, filename='input', output_dir='./tmp'):
+		self.__code = string
+		self.__filename = filename
+		self.__output_dir = output_dir
 
 	@property
 	def tokens(self):
@@ -160,7 +161,8 @@ class Parser(object):
 		if token.typ == 'SNIPPET':
 			print('snippet: (%s) %s %s' % (snippet_type, token.value, tag))
 			# invoke function that make snippet file
-			Snippet.mkfile(
+			snippet = Snippet(self.__output_dir)
+			snippet.mkfile(
 				filename=('%s.sublime-snippet' % (token.value)), 
 				snippet_type=snippet_type, 
 				value=token.value, 
@@ -175,12 +177,14 @@ class Parser(object):
 class Snippet(object):
 	"""docstring for Snippet"""
 
-	dir = '../tmp'
+	def __init__(self, dir_path):
+		self.dir = '../tmp'
 
-	@classmethod
 	def mkfile(self, filename, snippet_type, value, tag=''):
 		if not os.path.exists(self.dir):
 			os.mkdir(self.dir)
+
+		filename = re.sub(r'(?=\.sublime-snippet)', '.%s' % os.path.basename(self.dir), filename)
 
 		path = '%s/%s' % (self.dir, filename)
 		with open(path, 'w') as f:
