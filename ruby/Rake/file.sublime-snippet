@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+file '${1:file}' => '${2:source}' do
+	$0
+end
+]]></content>
+    <tabTrigger>file 'file' => 'source'</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Rake</description>
+</snippet>

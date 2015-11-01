@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+directory '${1:path/to/dir}'
+]]></content>
+    <tabTrigger>directory 'path/to/dir'</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Rake</description>
+</snippet>

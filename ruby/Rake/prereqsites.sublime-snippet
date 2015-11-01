@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+prereqsites
+]]></content>
+    <tabTrigger>prereqsites</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Rake</description>
+</snippet>

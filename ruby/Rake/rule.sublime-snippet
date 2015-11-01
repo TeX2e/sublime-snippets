@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+rule '${1:.ext}' => '${2:.source}' do
+	$0
+end
+]]></content>
+    <tabTrigger>rule '.ext' => '.source'</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Rake</description>
+</snippet>
