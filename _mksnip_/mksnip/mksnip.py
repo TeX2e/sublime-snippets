@@ -17,18 +17,20 @@ from Token import (Token, Tokens)
 #     Parser
 #       |
 #       | __init__(code, file_name)
-#       V
-#     parser
-#       |
-#       | tokenize() <----Tokens <----Token
+#       | tokens <----Tokens
+#       |               tokenize() <----Token
 #       V
 #     parser.tokens (tokenized result set in parser.tokens)
 #       |
 #       | parse() <----Error
-#       V
-#     Snippet
-#       |
-#       | mkfile(..) <----SnippetHelper <----VariableCountUp
+#       |   groups()
+#       |   group()
+#       |   snips()
+#       |   snip() <----Snippet
+#       |                 mkfile(..) <----SnippetHelper
+#       |                                   replace_variable() <----VariableCountUp
+#       |                                   format()                  cnt
+#       |                                                             wrap_variable()
 #       V
 #     :write the snippet in lang-dir/*.sublime-snippet
 #     
