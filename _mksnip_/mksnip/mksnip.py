@@ -180,16 +180,10 @@ statements = '''
 parser = Parser.Parser(
 	code=statements,
 	filename=filename,
-	make_file=CreateSnippet(DefineSnippet('ruby', 'BasicObject')).mkfile
+	make_file=CreateSnippet(DefineSnippet('ruby', 'BasicObject', 'tmp/')).mkfile
 )
 
 parser.parse()
 
 
-
-# for x in parser:
-# 	print(x)
-
-# print(parser.next())
-# print(parser.seek())
 

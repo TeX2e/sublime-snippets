@@ -1,6 +1,4 @@
 
-import re
-
 from Error import (Error)
 from Token import (Token, Tokens)
 
@@ -31,7 +29,7 @@ from Token import (Token, Tokens)
 class Parser(object):
 	"""docstring for Parser"""
 
-	def __init__(self, code, filename='input', 
+	def __init__(self, code='', filename='input', 
 			make_file=lambda filename, snippet_type, value, tag: None):
 		self.__code = code
 		self.__filename = filename
