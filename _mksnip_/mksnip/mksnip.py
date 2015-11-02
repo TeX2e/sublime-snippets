@@ -16,9 +16,10 @@ import textwrap
 
 class DefineSnippet(object):
 	"""docstring for DefineSnippet"""
-	def __init__(self, lang, dir_path=''):
+	def __init__(self, lang, classname, dir_path=''):
 		self.lang = lang
 		self.dir  = dir_path or lang
+		self.classname = classname
 		self.__init_snip_dir()
 
 	def __init_snip_dir(self):
@@ -26,7 +27,7 @@ class DefineSnippet(object):
 			os.mkdir(self.dir)
 
 	def __get_snip_path(self, filename):
-		filename = re.sub(r'(?=\.sublime-snippet)', '.%s' % os.path.basename(self.dir), filename)
+		filename = re.sub(r'(?=\.sublime-snippet)', '.%s' % os.path.basename(self.classname), filename)
 		path = '%s/%s' % (self.dir, filename)
 		return path
 
@@ -67,9 +68,9 @@ class DefineSnippet(object):
 class CreateSnippet(object):
 	"""docstring for CreateSnippet"""
 
-	def __init__(self, define_snippet):
-		self.__define_snippet = define_snippet
-		self.dir = define_snippet.dir
+	def __init__(self, define):
+		self.__define_snippet = define
+		self.dir = define.dir
 
 	def mkfile(self, filename, snippet_type, value, tag=''):
 		if snippet_type == '---constant---':
@@ -153,6 +154,7 @@ class VariableCountUp(object):
 # 	echo "$STR"
 # }
 
+filename = 'BasicObject.snip'
 
 statements = '''
 	---class-method---
@@ -177,7 +179,8 @@ statements = '''
 
 parser = Parser.Parser(
 	code=statements,
-	make_file=CreateSnippet(DefineSnippet('tmp')).mkfile
+	filename=filename,
+	make_file=CreateSnippet(DefineSnippet('ruby', 'BasicObject')).mkfile
 )
 
 parser.parse()
