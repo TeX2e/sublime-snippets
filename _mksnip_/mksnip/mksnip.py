@@ -39,19 +39,11 @@ from Token import (Token, Tokens)
 class Parser(object):
 	"""docstring for Parser"""
 
-	# __code = ""
-	# __filename = ""
-	# __tokens = Tokens( [Token(), ...] )
-
 	def __init__(self, string, filename='input', output_dir='./tmp'):
 		self.__code = string
 		self.__filename = filename
 		self.__output_dir = output_dir
 		self.__tokens = Tokens(self.__code).tokenize()
-
-	# @property
-	# def tokens(self):
-	# 	return self.__tokens
 
 	# --- iterable ---
 
@@ -63,44 +55,6 @@ class Parser(object):
 
 	def seek(self):
 		return self.__tokens.seek()
-
-	# --- take token ---
-
-	# def tokenize(self):
-	# 	self.__tokens = Tokens(list(self.tokenize_with_gen()))
-	# 	return self
-
-	# def tokenize_with_gen(self):
-	# 	keywords = {'IF', 'THEN', 'ENDIF', 'FOR', 'NEXT', 'GOSUB', 'RETURN'}
-	# 	token_specification = [
-	# 		('SKIP',    r'\t+|#.*'),      # Skip tabs and Comments
-	# 		('BEGIN',   r'---[-\w]+---'), # Separator
-	# 		('NEWLINE', r'\n+'),          # Line endings
-	# 		('TAG',     r'!'),
-	# 		('SNIPPET', r'.+'),
-	# 	]
-	# 	tok_regex = '|'.join('(?P<%s>%s)' % pair for pair in token_specification)
-	# 	get_token = re.compile(tok_regex).match
-	# 	line = 1
-	# 	pos = line_start = 0
-	# 	match_obj = get_token(self.__code)
-	# 	while match_obj is not None:
-	# 		typ = match_obj.lastgroup
-	# 		if typ == 'NEWLINE':
-	# 			line_start = pos
-	# 			line += 1
-	# 		elif typ != 'SKIP':
-	# 			val = match_obj.group(typ)
-	# 			if typ == 'ID' and val in keywords:
-	# 				typ = val
-	# 			yield Token(typ, val, line, match_obj.start() - line_start)
-	# 		pos = match_obj.end()
-	# 		match_obj = get_token(self.__code, pos)
-
-	# 	if pos != len(self.__code):
-	# 		raise RuntimeError('Unexpected character %r on line %d' % (self.__code[pos], line))
-
-	# 	yield Token('EOF', '---EOF---', line, 0)
 
 	# --- parse ---
 
@@ -176,6 +130,36 @@ class Parser(object):
 				self.__filename, token.line, token.column, 'not snippet: %s' % token.value
 			))
 		
+
+class DefineSnippet(object):
+	"""docstring for DefineSnippet"""
+	def __init__(self, lang):
+		self.lang = lang
+
+	def snip_constant():
+		pass
+
+	def snip_class_method():
+		pass
+
+	def snip_instance_method():
+		pass
+
+	def snip_private_method():
+		pass
+
+	def snip_define_method():
+		pass
+		
+
+import inspect
+
+method_list = [
+	func[0] for func in inspect.getmembers(DefineSnippet('ruby'), predicate=inspect.ismethod)
+	if func[0].startswith('snip_')
+]
+print(method_list)
+
 
 class Snippet(object):
 	"""docstring for Snippet"""
