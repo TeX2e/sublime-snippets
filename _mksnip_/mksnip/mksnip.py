@@ -1,10 +1,11 @@
 
 import os
-
+import re
 import Parser
+import textwrap
 
 
-#       | Snippet
+#       | CreateSnippet
 #       |   mkfile(..) <----SnippetHelper
 #       |                     replace_variable() <----VariableCountUp
 #       |                     format()                  cnt
@@ -15,54 +16,72 @@ import Parser
 
 class DefineSnippet(object):
 	"""docstring for DefineSnippet"""
-	def __init__(self, lang):
+	def __init__(self, lang, dir_path=''):
 		self.lang = lang
+		self.dir  = dir_path or lang
+		self.__init_snip_dir()
 
-	def snip_constant(self, string):
-		pass
-
-	def snip_class_method(self, string):
-		pass
-
-	def snip_instance_method(self, string):
-		pass
-
-	def snip_private_method(self, string):
-		pass
-
-	def snip_define_method(self, string):
-		pass
-		
-
-import inspect
-
-method_list = [
-	func for func,addr in inspect.getmembers(DefineSnippet('ruby'), predicate=inspect.ismethod)
-	if func.startswith('snip_')
-]
-print(method_list)
-
-
-class Snippet(object):
-	"""docstring for Snippet"""
-
-	def __init__(self, dir_path):
-		self.dir = '../tmp'
-
-	def mkfile(self, filename, snippet_type, value, tag=''):
+	def __init_snip_dir(self):
 		if not os.path.exists(self.dir):
 			os.mkdir(self.dir)
 
+	def __get_snip_path(self, filename):
 		filename = re.sub(r'(?=\.sublime-snippet)', '.%s' % os.path.basename(self.dir), filename)
-
 		path = '%s/%s' % (self.dir, filename)
+		return path
+
+	def snip_constant(self, filename, code):
+		pass
+
+	def snip_class_method(self, filename, code):
+		pass
+
+	def snip_instance_method(self, filename, code):
+		path = self.__get_snip_path(filename)
 		with open(path, 'w') as f:
 			f.write(
 				SnippetHelper.format(
-					snippet=value, trigger=value, desc=os.path.basename(self.dir)
+					snippet=SnippetHelper.replace_variable(code), 
+					trigger=code, 
+					lang=self.lang, 
+					desc=os.path.basename(self.dir)
 				)
 			)
 
+	def snip_private_method(self, filename, code):
+		pass
+
+	def snip_define_method(self, filename, code):
+		pass
+		
+
+# import inspect
+
+# method_list = [
+# 	(func,addr) for func,addr in inspect.getmembers(DefineSnippet('ruby', 'tmp'), predicate=inspect.ismethod)
+# 	if func.startswith('snip_')
+# ]
+# print(method_list)
+
+
+class CreateSnippet(object):
+	"""docstring for CreateSnippet"""
+
+	def __init__(self, define_snippet):
+		self.__define_snippet = define_snippet
+		self.dir = define_snippet.dir
+
+	def mkfile(self, filename, snippet_type, value, tag=''):
+		if snippet_type == '---constant---':
+			self.__define_snippet.snip_constant(filename, value)
+		elif snippet_type == '---class-method---':
+			self.__define_snippet.snip_class_method(filename, value)
+		elif snippet_type == '---instance-method---':
+			self.__define_snippet.snip_instance_method(filename, value)
+		elif snippet_type == '---private-method---':
+			self.__define_snippet.snip_private_method(filename, value)
+		elif snippet_type == '---define-method---':
+			self.__define_snippet.snip_define_method(filename, value)
 
 class SnippetHelper(object):
 	@staticmethod
@@ -76,28 +95,30 @@ class SnippetHelper(object):
 		)
 
 	@staticmethod
-	def format(snippet, trigger, desc):
+	def format(snippet, trigger, lang, desc):
 		abstract_snippet = '''
 			<snippet>
 				<content><![CDATA[
 			{snippet}
 			]]></content>
 				<tabTrigger>{trigger}</tabTrigger>
-				<scope>source.ruby</scope>
+				<scope>source.{lang}</scope>
 				<description>{desc}</description>
 			</snippet>
 		'''
 		concrete_snippet = textwrap.dedent(
 			abstract_snippet.format(
-				snippet=SnippetHelper.replace_variable(snippet), 
+				snippet=snippet, 
 				trigger=trigger, 
-				desc=desc)
+				lang=lang,
+				desc=desc
+			)
 		)
 		return concrete_snippet
 
 
 class VariableCountUp(object):
-	"""docstring for SnippetHelper"""
+	"""docstring for VariableCountUp"""
 	def __init__(self):
 		self.cnt = 1
 
@@ -154,7 +175,11 @@ statements = '''
 	---EOF---
 '''
 
-parser = Parser.Parser(statements)#.tokenize()
+parser = Parser.Parser(
+	code=statements,
+	make_file=CreateSnippet(DefineSnippet('tmp')).mkfile
+)
+
 parser.parse()
 
 
