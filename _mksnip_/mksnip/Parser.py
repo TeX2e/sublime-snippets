@@ -1,6 +1,5 @@
 
 import re
-import textwrap
 
 from Error import (Error)
 from Token import (Token, Tokens)
@@ -27,16 +26,15 @@ from Token import (Token, Tokens)
 #       |   snips()
 #       |   snip() <----make_file()
 #       V
-#     :write the snippet in lang-dir/*.sublime-snippet
 #   
 
 class Parser(object):
 	"""docstring for Parser"""
 
-	def __init__(self, code, filename='input', output_dir='./tmp', make_file=lambda a,b,c,d: None):
+	def __init__(self, code, filename='input', 
+			make_file=lambda filename, snippet_type, value, tag: None):
 		self.__code = code
 		self.__filename = filename
-		self.__output_dir = output_dir
 		self.__tokens = Tokens(self.__code).tokenize()
 		self.__make_file = make_file
 
@@ -112,21 +110,14 @@ class Parser(object):
 		token = self.__tokens.next()
 		if token.typ == 'SNIPPET':
 			print('snippet: (%s) %s %s' % (snippet_type, token.value, tag))
-			# # invoke function that make snippet file
-			# snippet = Snippet(self.__output_dir)
-			# snippet.mkfile(
-			# 	filename=('%s.sublime-snippet' % (token.value)), 
-			# 	snippet_type=snippet_type, 
-			# 	value=token.value, 
-			# 	tag=tag
-			# )
 			self.__make_file(
-				('%s.sublime-snippet' % (token.value)),
-				snippet_type,
-				token.value,
-				tag,
+				filename=('%s.sublime-snippet' % (token.value)),
+				snippet_type=snippet_type,
+				value=token.value,
+				tag=tag,
 			)
 		else:
 			Error.print_error(Error.message(
 				self.__filename, token.line, token.column, 'not snippet: %s' % token.value
 			))
+
