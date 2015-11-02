@@ -39,11 +39,12 @@ from Token import (Token, Tokens)
 class Parser(object):
 	"""docstring for Parser"""
 
-	def __init__(self, string, filename='input', output_dir='./tmp'):
-		self.__code = string
+	def __init__(self, code, filename='input', output_dir='./tmp', make_file=lambda a,b,c,d: None):
+		self.__code = code
 		self.__filename = filename
 		self.__output_dir = output_dir
 		self.__tokens = Tokens(self.__code).tokenize()
+		self.__make_file = make_file
 
 	# --- iterable ---
 
@@ -117,13 +118,19 @@ class Parser(object):
 		token = self.__tokens.next()
 		if token.typ == 'SNIPPET':
 			print('snippet: (%s) %s %s' % (snippet_type, token.value, tag))
-			# invoke function that make snippet file
-			snippet = Snippet(self.__output_dir)
-			snippet.mkfile(
-				filename=('%s.sublime-snippet' % (token.value)), 
-				snippet_type=snippet_type, 
-				value=token.value, 
-				tag=tag
+			# # invoke function that make snippet file
+			# snippet = Snippet(self.__output_dir)
+			# snippet.mkfile(
+			# 	filename=('%s.sublime-snippet' % (token.value)), 
+			# 	snippet_type=snippet_type, 
+			# 	value=token.value, 
+			# 	tag=tag
+			# )
+			self.__make_file(
+				('%s.sublime-snippet' % (token.value)),
+				snippet_type,
+				token.value,
+				tag,
 			)
 		else:
 			Error.print_error(Error.message(
@@ -136,27 +143,27 @@ class DefineSnippet(object):
 	def __init__(self, lang):
 		self.lang = lang
 
-	def snip_constant():
+	def snip_constant(self, string):
 		pass
 
-	def snip_class_method():
+	def snip_class_method(self, string):
 		pass
 
-	def snip_instance_method():
+	def snip_instance_method(self, string):
 		pass
 
-	def snip_private_method():
+	def snip_private_method(self, string):
 		pass
 
-	def snip_define_method():
+	def snip_define_method(self, string):
 		pass
 		
 
 import inspect
 
 method_list = [
-	func[0] for func in inspect.getmembers(DefineSnippet('ruby'), predicate=inspect.ismethod)
-	if func[0].startswith('snip_')
+	func for func,addr in inspect.getmembers(DefineSnippet('ruby'), predicate=inspect.ismethod)
+	if func.startswith('snip_')
 ]
 print(method_list)
 
