@@ -32,10 +32,24 @@ class DefineSnippet(object):
 	def __get_snip_file_path(self, filename):
 		return '%s/%s.%s.sublime-snippet' % (self.dir, filename, self.classname)
 
-	def snip_constant(self, filename, snippet):
-		path = self.__get_snip_file_path('%s::%s' % (classname, filename))
+	def snip_constant(self, snippet):
+		path = self.__get_snip_file_path('%s::%s' % (classname, snippet.value))
+		if snippet.tag:
+			snippet_value = snippet.value
+		else:
+			snippet_value = '%s::%s' % (classname, snippet.value)
 
-	def snip_class_method(self, filename, snippet):
+		with open(path, 'w') as f:
+			f.write(
+				SnippetHelper.format(
+					snippet=snippet_value, 
+					trigger=snippet_value, 
+					lang=self.lang, 
+					desc=self.classname
+				)
+			)
+
+	def snip_class_method(self, snippet):
 		pass
 
 	def snip_instance_method(self, snippet, tag=''):
@@ -60,7 +74,7 @@ class DefineSnippet(object):
 			)
 			self.snip_instance_method(block_snippet)
 
-	def snip_instance_method_with_tag(self, filename, snippet):
+	def snip_instance_method_with_tag(self, snippet):
 		path = self.__get_snip_file_path(filename)
 		with open(path, 'w') as f:
 			f.write(
@@ -72,10 +86,10 @@ class DefineSnippet(object):
 				)
 			)
 
-	def snip_private_method(self, filename, snippet):
+	def snip_private_method(self, snippet):
 		pass
 
-	def snip_define_method(self, filename, snippet):
+	def snip_define_method(self, snippet):
 		pass
 
 	@staticmethod
@@ -116,7 +130,9 @@ class CreateSnippet(object):
 	# 		self.__define_snippet.snip_define_method(filename, value)
 
 	def mkfile(self, snippet):
-		if snippet.type == '---instance-method---':
+		if snippet.type == '---constant---':
+			self.__define_snippet.snip_constant(snippet)
+		elif snippet.type == '---instance-method---':
 			self.__define_snippet.snip_instance_method(snippet)
 
 		
