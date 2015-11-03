@@ -26,7 +26,7 @@ class DefineSnippet(object):
 		if not os.path.exists(self.dir):
 			os.mkdir(self.dir)
 
-	def __get_snip_path(self, filename):
+	def __get_snip_file_path(self, filename):
 		filename = re.sub(r'(?=\.sublime-snippet)', '.%s' % (self.classname), filename)
 		path = '%s/%s' % (self.dir, filename)
 		return path
@@ -38,7 +38,7 @@ class DefineSnippet(object):
 		pass
 
 	def snip_instance_method(self, filename, code):
-		path = self.__get_snip_path(filename)
+		path = self.__get_snip_file_path(filename)
 		with open(path, 'w') as f:
 			f.write(
 				SnippetHelper.format(
