@@ -1,5 +1,6 @@
 
 import os
+import sys
 import re
 
 import Parser
@@ -32,19 +33,19 @@ class DefineSnippet(object):
 		path = '%s/%s' % (self.dir, filename)
 		return path
 
-	def snip_constant(self, filename, code):
+	def snip_constant(self, filename, snippet):
 		pass
 
-	def snip_class_method(self, filename, code):
+	def snip_class_method(self, filename, snippet):
 		pass
 
-	def snip_instance_method(self, filename, code):
+	def snip_instance_method(self, filename, snippet):
 		path = self.__get_snip_file_path(filename)
 		with open(path, 'w') as f:
 			f.write(
 				SnippetHelper.format(
-					snippet=SnippetHelper.replace_variable(code), 
-					trigger=SnippetHelper.remove_newline_and_tab(code), 
+					snippet=SnippetHelper.replace_variable(snippet), 
+					trigger=SnippetHelper.remove_newline_and_tab(snippet), 
 					lang=self.lang, 
 					desc=classname
 				)
@@ -54,13 +55,25 @@ class DefineSnippet(object):
 		if match_block.search(filename):
 			self.snip_instance_method(
 				filename=self.__filename_proc_to_block(filename), 
-				code=self.__snip_proc_to_block(code)
+				snippet=self.__snip_proc_to_block(snippet)
 			)
 
-	def snip_private_method(self, filename, code):
+	def snip_instance_method_with_tag(self, filename, snippet):
+		path = self.__get_snip_file_path(filename)
+		with open(path, 'w') as f:
+			f.write(
+				SnippetHelper.format(
+					snippet=SnippetHelper.remove_parenthesis( SnippetHelper.replace_variable(snippet) ), 
+					trigger=SnippetHelper.remove_newline_and_tab(snippet), 
+					lang=self.lang, 
+					desc=classname
+				)
+			)
+
+	def snip_private_method(self, filename, snippet):
 		pass
 
-	def snip_define_method(self, filename, code):
+	def snip_define_method(self, filename, snippet):
 		pass
 
 	@staticmethod
@@ -91,8 +104,10 @@ class CreateSnippet(object):
 			self.__define_snippet.snip_constant(filename, value)
 		elif snippet_type == '---class-method---':
 			self.__define_snippet.snip_class_method(filename, value)
-		elif snippet_type == '---instance-method---':
+		elif snippet_type == '---instance-method---' and not tag:
 			self.__define_snippet.snip_instance_method(filename, value)
+		elif snippet_type == '---instance-method---' and tag:
+			self.__define_snippet.snip_instance_method_with_tag(filename, value)
 		elif snippet_type == '---private-method---':
 			self.__define_snippet.snip_private_method(filename, value)
 		elif snippet_type == '---define-method---':
@@ -150,22 +165,38 @@ class CreateSnippet(object):
 # 	---EOF---
 # '''
 
-file_path = '../ruby/BasicObject.snip'
+langs = {'ruby'}
 
-statements = ''
-with open(file_path, 'r') as f:
-	statements = f.read();
+files = sys.argv[2:]
+if files == []:
+	print('usage: python mksnip.py <lang> <file.snip>')
+	exit()
 
-filename = os.path.basename(file_path)
-classname, ext = os.path.splitext(filename)
+lang = sys.argv[1]
+if not lang in langs:
+	print('no such a language: %s' % sys.argv[1])
+	exit()
 
-parser = Parser.Parser(
-	code=statements,
-	filename=filename,
-	make_file=CreateSnippet(DefineSnippet('ruby', classname, 'tmp/')).mkfile
-)
+for file_path in files:
+	# file_path = '../ruby/BasicObject.snip'
+	statements = ''
+	try:
+		with open(file_path, 'r') as f:
+			statements = f.read();
+	except FileNotFoundError as e:
+		print(e)
+		continue
+	
+	filename = os.path.basename(file_path)
+	classname, ext = os.path.splitext(filename)
 
-parser.parse()
+	parser = Parser.Parser(
+		code=statements,
+		filename=filename,
+		make_file=CreateSnippet(DefineSnippet(lang, classname, 'tmp-%s/' % lang)).mkfile
+	)
+
+	parser.parse()
 
 
 
