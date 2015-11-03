@@ -43,10 +43,17 @@ class DefineSnippet(object):
 			f.write(
 				SnippetHelper.format(
 					snippet=SnippetHelper.replace_variable(code), 
-					trigger=code, 
+					trigger=SnippetHelper.remove_newline_and_tab(code), 
 					lang=self.lang, 
 					desc=classname
 				)
+			)
+
+		match_block = re.compile(r"(?<!\{\$0:)\bblock\b")
+		if match_block.search(filename):
+			self.snip_instance_method(
+				filename=self.__filename_proc_to_block(filename), 
+				code=self.__snip_proc_to_block(code)
 			)
 
 	def snip_private_method(self, filename, code):
@@ -54,6 +61,21 @@ class DefineSnippet(object):
 
 	def snip_define_method(self, filename, code):
 		pass
+
+	@staticmethod
+	def __snip_proc_to_block(snippet):
+		snippet = re.compile(r'(?<= )\{(?= ?block)').sub("do\n\t", snippet)
+		snippet = re.compile(r'(?<= )\{').sub("do", snippet)
+		snippet = re.compile(r'(?<=\|) ').sub("\n\t", snippet)
+		snippet = re.compile(r' \}').sub("\nend", snippet)
+		return snippet
+
+	@staticmethod
+	def __filename_proc_to_block(filename):
+		filename = re.compile(r'(?<= )\{').sub('do', filename)
+		filename = re.compile(r'\bblock\b').sub('..', filename)
+		filename = re.compile(r'(?<= )\}').sub('end', filename)
+		return filename
 		
 
 # import inspect
@@ -86,14 +108,16 @@ class CreateSnippet(object):
 
 class SnippetHelper(object):
 	@staticmethod
-	def replace_variable(snippet_str):
+	def replace_variable(snippet):
 		count_up = VariableCountUp()
 		
-		return re.sub(
-			r'([a-zA-Z_][a-z_=0-9]*)(?=[,)\|])', 
+		print(snippet)
+		snippet = re.compile(r'([a-zA-Z_][a-z_=0-9]*)(?=[,)\|])').sub(
 			count_up.wrap_variable,
-			snippet_str
+			snippet
 		)
+		snippet = re.compile(r'\bblock\b').sub('${0:block}', snippet)
+		return snippet
 
 	@staticmethod
 	def format(snippet, trigger, lang, desc):
@@ -107,15 +131,18 @@ class SnippetHelper(object):
 				<description>{desc}</description>
 			</snippet>
 		'''
-		concrete_snippet = textwrap.dedent(
-			abstract_snippet.format(
-				snippet=snippet, 
-				trigger=trigger, 
-				lang=lang,
-				desc=desc
-			)
+		abstract_snippet = textwrap.dedent(abstract_snippet)
+		concrete_snippet = abstract_snippet.format(
+			snippet=snippet, 
+			trigger=trigger, 
+			lang=lang,
+			desc=desc
 		)
 		return concrete_snippet
+
+	@staticmethod
+	def remove_newline_and_tab(string):
+		return re.compile(r'[\n\t]+').sub('', string)
 
 
 class VariableCountUp(object):
