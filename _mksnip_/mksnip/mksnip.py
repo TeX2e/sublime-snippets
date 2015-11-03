@@ -27,7 +27,7 @@ class DefineSnippet(object):
 			os.mkdir(self.dir)
 
 	def __get_snip_path(self, filename):
-		filename = re.sub(r'(?=\.sublime-snippet)', '.%s' % os.path.basename(self.classname), filename)
+		filename = re.sub(r'(?=\.sublime-snippet)', '.%s' % (self.classname), filename)
 		path = '%s/%s' % (self.dir, filename)
 		return path
 
@@ -45,7 +45,7 @@ class DefineSnippet(object):
 					snippet=SnippetHelper.replace_variable(code), 
 					trigger=code, 
 					lang=self.lang, 
-					desc=os.path.basename(self.dir)
+					desc=classname
 				)
 			)
 
@@ -154,33 +154,43 @@ class VariableCountUp(object):
 # 	echo "$STR"
 # }
 
-filename = 'BasicObject.snip'
 
-statements = '''
-	---class-method---
-	new
-	try_convert(obj)
-	---instance-method---
-	__id__
-	object_id
-	send(sym, args)
-	__send__(sym, args)
-	equal?(other)
-	instance_eval(string)
-	instance_eval { |obj| block }
-	instance_exec(item) { |item| block }
-	---define-method---
-	method_missing(method, args, block)
-	self.singleton_method_added(id)
-	self.singleton_method_removed(sym)
-	self.singleton_method_undefined(sym)
-	---EOF---
-'''
+# filename = 'BasicObject.snip'
+
+# statements = '''
+# 	---class-method---
+# 	new
+# 	try_convert(obj)
+# 	---instance-method---
+# 	__id__
+# 	object_id
+# 	send(sym, args)
+# 	__send__(sym, args)
+# 	equal?(other)
+# 	instance_eval(string)
+# 	instance_eval { |obj| block }
+# 	instance_exec(item) { |item| block }
+# 	---define-method---
+# 	method_missing(method, args, block)
+# 	self.singleton_method_added(id)
+# 	self.singleton_method_removed(sym)
+# 	self.singleton_method_undefined(sym)
+# 	---EOF---
+# '''
+
+file_path = '../ruby/BasicObject.snip'
+
+statements = ''
+with open(file_path, 'r') as f:
+	statements = f.read();
+
+filename = os.path.basename(file_path)
+classname, ext = os.path.splitext(filename)
 
 parser = Parser.Parser(
 	code=statements,
 	filename=filename,
-	make_file=CreateSnippet(DefineSnippet('ruby', 'BasicObject', 'tmp/')).mkfile
+	make_file=CreateSnippet(DefineSnippet('ruby', classname, 'tmp/')).mkfile
 )
 
 parser.parse()
