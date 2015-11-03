@@ -1,7 +1,11 @@
 
+import collections
+
 from Error import (Error)
 from Token import (Token, Tokens)
 
+
+Snippet = collections.namedtuple('Snippet', ['filename', 'type', 'value', 'tag'])
 
 # reading:
 #   A <---- B   :  A depends on B
@@ -109,10 +113,11 @@ class Parser(object):
 		if token.typ == 'SNIPPET':
 			print('snippet: (%s) %s %s' % (snippet_type, token.value, tag))
 			self.__make_file(
-				filename=('%s.sublime-snippet' % (token.value)),
-				snippet_type=snippet_type,
-				value=token.value,
-				tag=tag,
+				# filename=('%s.sublime-snippet' % (token.value)),
+				# snippet_type=snippet_type,
+				# value=token.value,
+				# tag=tag,
+				Snippet(token.value, snippet_type, token.value, tag)
 			)
 		else:
 			Error.print_error(Error.message(

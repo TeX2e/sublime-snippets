@@ -4,6 +4,7 @@ import sys
 import re
 
 import Parser
+from Parser import Snippet
 import SnippetHelper
 
 
@@ -29,34 +30,35 @@ class DefineSnippet(object):
 			os.mkdir(self.dir)
 
 	def __get_snip_file_path(self, filename):
-		filename = re.sub(r'(?=\.sublime-snippet)', '.%s' % (self.classname), filename)
-		path = '%s/%s' % (self.dir, filename)
-		return path
+		return '%s/%s.%s.sublime-snippet' % (self.dir, filename, self.classname)
 
 	def snip_constant(self, filename, snippet):
-		pass
+		path = self.__get_snip_file_path('%s::%s' % (classname, filename))
 
 	def snip_class_method(self, filename, snippet):
 		pass
 
-	def snip_instance_method(self, filename, snippet):
-		path = self.__get_snip_file_path(filename)
+	def snip_instance_method(self, snippet, tag=''):
+		path = self.__get_snip_file_path(snippet.filename)
 		with open(path, 'w') as f:
 			f.write(
 				SnippetHelper.format(
-					snippet=SnippetHelper.replace_variable(snippet), 
-					trigger=SnippetHelper.remove_newline_and_tab(snippet), 
+					snippet=SnippetHelper.replace_variable(snippet.value), 
+					trigger=SnippetHelper.remove_newline_and_tab(snippet.value), 
 					lang=self.lang, 
-					desc=classname
+					desc=self.classname
 				)
 			)
 
-		match_block = re.compile(r"(?<!\{\$0:)\bblock\b")
-		if match_block.search(filename):
-			self.snip_instance_method(
-				filename=self.__filename_proc_to_block(filename), 
-				snippet=self.__snip_proc_to_block(snippet)
+		match_proc = re.compile(r"\bblock\b\s*\}")
+		if match_proc.search(path):
+			block_snippet = Snippet(
+				self.__filename_proc_to_block(snippet.filename),
+				snippet.type,
+				self.__snip_proc_to_block(snippet.value),
+				tag
 			)
+			self.snip_instance_method(block_snippet)
 
 	def snip_instance_method_with_tag(self, filename, snippet):
 		path = self.__get_snip_file_path(filename)
@@ -66,7 +68,7 @@ class DefineSnippet(object):
 					snippet=SnippetHelper.remove_parenthesis( SnippetHelper.replace_variable(snippet) ), 
 					trigger=SnippetHelper.remove_newline_and_tab(snippet), 
 					lang=self.lang, 
-					desc=classname
+					desc=self.classname
 				)
 			)
 
@@ -99,20 +101,23 @@ class CreateSnippet(object):
 		self.__define_snippet = define
 		self.dir = define.dir
 
-	def mkfile(self, filename, snippet_type, value, tag=''):
-		if snippet_type == '---constant---':
-			self.__define_snippet.snip_constant(filename, value)
-		elif snippet_type == '---class-method---':
-			self.__define_snippet.snip_class_method(filename, value)
-		elif snippet_type == '---instance-method---' and not tag:
-			self.__define_snippet.snip_instance_method(filename, value)
-		elif snippet_type == '---instance-method---' and tag:
-			self.__define_snippet.snip_instance_method_with_tag(filename, value)
-		elif snippet_type == '---private-method---':
-			self.__define_snippet.snip_private_method(filename, value)
-		elif snippet_type == '---define-method---':
-			self.__define_snippet.snip_define_method(filename, value)
+	# def mkfile(self, filename, snippet_type, value, tag=''):
+	# 	if snippet_type == '---constant---':
+	# 		self.__define_snippet.snip_constant(filename, value)
+	# 	elif snippet_type == '---class-method---':
+	# 		self.__define_snippet.snip_class_method(filename, value)
+	# 	elif snippet_type == '---instance-method---' and not tag:
+	# 		self.__define_snippet.snip_instance_method(filename, value)
+	# 	elif snippet_type == '---instance-method---' and tag:
+	# 		self.__define_snippet.snip_instance_method_with_tag(filename, value)
+	# 	elif snippet_type == '---private-method---':
+	# 		self.__define_snippet.snip_private_method(filename, value)
+	# 	elif snippet_type == '---define-method---':
+	# 		self.__define_snippet.snip_define_method(filename, value)
 
+	def mkfile(self, snippet):
+		if snippet.type == '---instance-method---':
+			self.__define_snippet.snip_instance_method(snippet)
 
 		
 
