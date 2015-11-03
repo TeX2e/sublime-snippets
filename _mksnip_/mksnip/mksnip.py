@@ -78,14 +78,6 @@ class DefineSnippet(object):
 		return filename
 		
 
-# import inspect
-
-# method_list = [
-# 	(func,addr) for func,addr in inspect.getmembers(DefineSnippet('ruby', 'tmp'), predicate=inspect.ismethod)
-# 	if func.startswith('snip_')
-# ]
-# print(method_list)
-
 
 class CreateSnippet(object):
 	"""docstring for CreateSnippet"""
