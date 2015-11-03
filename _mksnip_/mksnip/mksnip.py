@@ -1,8 +1,9 @@
 
 import os
 import re
+
 import Parser
-import textwrap
+import SnippetHelper
 
 
 #       | CreateSnippet
@@ -78,7 +79,6 @@ class DefineSnippet(object):
 		return filename
 		
 
-
 class CreateSnippet(object):
 	"""docstring for CreateSnippet"""
 
@@ -98,54 +98,7 @@ class CreateSnippet(object):
 		elif snippet_type == '---define-method---':
 			self.__define_snippet.snip_define_method(filename, value)
 
-class SnippetHelper(object):
-	@staticmethod
-	def replace_variable(snippet):
-		count_up = VariableCountUp()
-		
-		print(snippet)
-		snippet = re.compile(r'([a-zA-Z_][a-z_=0-9]*)(?=[,)\|])').sub(
-			count_up.wrap_variable,
-			snippet
-		)
-		snippet = re.compile(r'\bblock\b').sub('${0:block}', snippet)
-		return snippet
 
-	@staticmethod
-	def format(snippet, trigger, lang, desc):
-		abstract_snippet = '''
-			<snippet>
-				<content><![CDATA[
-			{snippet}
-			]]></content>
-				<tabTrigger>{trigger}</tabTrigger>
-				<scope>source.{lang}</scope>
-				<description>{desc}</description>
-			</snippet>
-		'''
-		abstract_snippet = textwrap.dedent(abstract_snippet)
-		concrete_snippet = abstract_snippet.format(
-			snippet=snippet, 
-			trigger=trigger, 
-			lang=lang,
-			desc=desc
-		)
-		return concrete_snippet
-
-	@staticmethod
-	def remove_newline_and_tab(string):
-		return re.compile(r'[\n\t]+').sub('', string)
-
-
-class VariableCountUp(object):
-	"""docstring for VariableCountUp"""
-	def __init__(self):
-		self.cnt = 1
-
-	def wrap_variable(self, match_obj):
-		snippet_str = '${%d:%s}' % (self.cnt, match_obj.group())
-		self.cnt += 1
-		return snippet_str
 		
 
 # # convert { block } to 'do block end'
@@ -174,7 +127,7 @@ class VariableCountUp(object):
 # }
 
 
-# filename = 'BasicObject.snip'
+# file_path = 'BasicObject.snip'
 
 # statements = '''
 # 	---class-method---
