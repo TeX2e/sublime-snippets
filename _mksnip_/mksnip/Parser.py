@@ -31,10 +31,20 @@ Snippet = collections.namedtuple('Snippet', ['filename', 'type', 'value', 'tag']
 #   
 
 class Parser(object):
-	"""docstring for Parser"""
+	"""
+	Parser initializer is this:
+
+		Parser(
+			code,      # parserable string
+			filename,  # for error output
+			make_file  # mkfile should be callable
+		)
+
+	mkfile has the process how to create snippet file with specific arguments
+	"""
 
 	def __init__(self, code, filename='input', 
-			make_file=lambda filename, snippet_type, value, tag: None):
+			make_file=(lambda filename, snippet_type, value, tag: None) ):
 		self.__code = code
 		self.__filename = filename
 		self.__tokens = Tokens(self.__code).tokenize()
@@ -62,6 +72,7 @@ class Parser(object):
 	#   tag    ::= '!'
 	#   str    ::= .*
 	# 
+
 	def parse(self):
 		self.groups()
 		return self
