@@ -8,14 +8,9 @@ from Parser import Snippet
 import SnippetHelper
 
 
-#       | CreateSnippet
-#       |   mkfile(..) <----SnippetHelper
-#       |                     replace_variable() <----VariableCountUp
-#       |                     format()                  cnt
-#       |                                               wrap_variable()
-#       V
-#     :write the snippet in lang-dir/*.sublime-snippet
-
+# 
+# Define how to create snippet file
+# 
 
 class DefineSnippet(object):
 	"""docstring for DefineSnippet"""
@@ -24,6 +19,12 @@ class DefineSnippet(object):
 		self.dir  = dir_path or lang
 		self.classname = classname
 		self.__init_snip_dir()
+
+	def mkfile(self, snippet):
+		if snippet.type == '---constant---':
+			self.snip_constant(snippet)
+		elif snippet.type == '---instance-method---':
+			self.snip_instance_method(snippet)
 
 	def __init_snip_dir(self):
 		if not os.path.exists(self.dir):
@@ -77,7 +78,7 @@ class DefineSnippet(object):
 				self.__snip_proc_to_block(snippet.value),
 				snippet.tag
 			)
-			self.snip_instance_method(block_snippet)
+			self.snip_instance_method(block_snippet) # re-invoke
 
 	def snip_instance_method_with_tag(self, snippet):
 		path = self.__get_snip_file_path(filename)
@@ -112,51 +113,8 @@ class DefineSnippet(object):
 		filename = re.compile(r'(?<= )\}').sub('end', filename)
 		return filename
 		
-
-class CreateSnippet(object):
-	"""docstring for CreateSnippet"""
-
-	def __init__(self, define):
-		self.__define_snippet = define
-		self.dir = define.dir
-
-	# def mkfile(self, filename, snippet_type, value, tag=''):
-	# 	if snippet_type == '---constant---':
-	# 		self.__define_snippet.snip_constant(filename, value)
-	# 	elif snippet_type == '---class-method---':
-	# 		self.__define_snippet.snip_class_method(filename, value)
-	# 	elif snippet_type == '---instance-method---' and not tag:
-	# 		self.__define_snippet.snip_instance_method(filename, value)
-	# 	elif snippet_type == '---instance-method---' and tag:
-	# 		self.__define_snippet.snip_instance_method_with_tag(filename, value)
-	# 	elif snippet_type == '---private-method---':
-	# 		self.__define_snippet.snip_private_method(filename, value)
-	# 	elif snippet_type == '---define-method---':
-	# 		self.__define_snippet.snip_define_method(filename, value)
-
-	def mkfile(self, snippet):
-		if snippet.type == '---constant---':
-			self.__define_snippet.snip_constant(snippet)
-		elif snippet.type == '---instance-method---':
-			self.__define_snippet.snip_instance_method(snippet)
-
 		
 
-# # convert { block } to 'do block end'
-# function snippet_block() {
-# 	local STR=$*
-# 	STR=$(
-# 		echo $STR | 
-# 		sed -e 's/ { \$/ do\\n\\t$/' |  # { ${2:block} -> do\\n\\t${2:block}
-# 		sed -e 's/ {/ do/' |      # { -> do
-# 		sed -e 's/| /|\\n\\t/' |  # | -> |\n\t
-# 		sed -e 's/ }/\\nend/' |   # } -> \n end
-# 		sed -e 's/\t\${[1-9]:block}/\t${0:block}/' | # do ${2:block} -> do ${0:block}
-# 		sed -e 's/\t\${[1-9]:bool}/\t${0:bool}/'     # do ${2:bool} -> do ${0:bool}
-# 	)
-# 	echo "$STR"
-# }
-# 
 # # convert 'def func' to 'def func $0 end'
 # function snippet_def() {
 # 	local STR=$*
@@ -219,7 +177,7 @@ for file_path in files:
 	parser = Parser.Parser(
 		code=statements,
 		filename=filename,
-		make_file=CreateSnippet(DefineSnippet(lang, classname, 'tmp-%s/' % lang)).mkfile
+		make_file=DefineSnippet(lang, classname, 'tmp-%s/' % lang).mkfile
 	)
 
 	parser.parse()
