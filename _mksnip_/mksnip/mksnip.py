@@ -52,13 +52,18 @@ class DefineSnippet(object):
 	def snip_class_method(self, snippet):
 		pass
 
-	def snip_instance_method(self, snippet, tag=''):
+	def snip_instance_method(self, snippet):
 		path = self.__get_snip_file_path(snippet.filename)
+		snippet_value = SnippetHelper.replace_variable(snippet.value)
+		snippet_trigger = SnippetHelper.remove_newline_and_tab(snippet.value)
+		if snippet.tag:
+			snippet_value = SnippetHelper.remove_parenthesis(snippet_value)
+
 		with open(path, 'w') as f:
 			f.write(
 				SnippetHelper.format(
-					snippet=SnippetHelper.replace_variable(snippet.value), 
-					trigger=SnippetHelper.remove_newline_and_tab(snippet.value), 
+					snippet=snippet_value, 
+					trigger=snippet_trigger, 
 					lang=self.lang, 
 					desc=self.classname
 				)
@@ -70,7 +75,7 @@ class DefineSnippet(object):
 				self.__filename_proc_to_block(snippet.filename),
 				snippet.type,
 				self.__snip_proc_to_block(snippet.value),
-				tag
+				snippet.tag
 			)
 			self.snip_instance_method(block_snippet)
 
