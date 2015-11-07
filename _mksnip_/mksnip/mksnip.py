@@ -151,21 +151,22 @@ class DefineSnippet(object):
 
 langs = {'ruby'}
 
-files = sys.argv[2:]
-if files == []:
-	print('usage: python mksnip.py <lang> <file.snip>')
-	exit()
-
 lang = sys.argv[1]
 if not lang in langs:
 	print('no such a language: %s' % sys.argv[1])
 	exit()
 
+files = sys.argv[2:]
+if files == []:
+	print('usage: python mksnip.py <lang> <file.snip>')
+	exit()
+
+
 for file_path in files:
 	# file_path = '../ruby/BasicObject.snip'
 	statements = ''
 	try:
-		with open(file_path, 'r') as f:
+		with open(file_path) as f:
 			statements = f.read();
 	except FileNotFoundError as e:
 		print(e)
@@ -173,14 +174,42 @@ for file_path in files:
 	
 	filename = os.path.basename(file_path)
 	classname, ext = os.path.splitext(filename)
+	snips_dir = 'tmp-%s/' % lang
+	lock_file = '.updating'
+	lock_file_path = '%s%s' % (snips_dir, lock_file)
 
-	parser = Parser.Parser(
-		code=statements,
-		filename=filename,
-		make_file=DefineSnippet(lang, classname, 'tmp-%s/' % lang).mkfile
-	)
+	try:
+		with open(lock_file_path, 'w') as f:
+			f.write('')
+	except Exception as e:
+		raise e
+	else:
+		parser = Parser.Parser(
+			code=statements,
+			filename=filename,
+			make_file=DefineSnippet(lang, classname, snips_dir).mkfile
+		)
+		parser.parse()
+	finally:
+		last_modified = os.stat(lock_file_path).st_mtime
 
-	parser.parse()
+		for snip_file in os.listdir(snips_dir):
+			if snip_file.startswith('.'):
+				continue
+			last_modified_of_file = os.stat(snips_dir + snip_file).st_mtime
 
+			if last_modified_of_file < last_modified:
+				os.remove(snips_dir + snip_file)
+				print('\tremove: %s' % snip_file)
+
+		os.remove(lock_file_path)
+
+		print('[Finished updating %s]' % filename)
+
+	
+
+	
+
+	
 
 

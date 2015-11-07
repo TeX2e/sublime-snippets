@@ -83,7 +83,7 @@ class Parser(object):
 			if next_token.typ == 'BEGIN':
 				self.group()
 			elif next_token.typ == 'EOF':
-				print('[Finished %s]' % self.__filename)
+				print('[Finished parsing %s]' % self.__filename)
 				break
 			else:
 				Error.print_error(Error.message(
