@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+\\begin{tabularx}{${2:c}}{${3:10em}}
+$0${2/((?<=.)c|l|r)|./(?1: & )/g}
+\\end{tabularx}
+]]></content>
+    <tabTrigger>tabularx</tabTrigger>
+    <scope>text.tex.latex</scope>
+</snippet>
+
+

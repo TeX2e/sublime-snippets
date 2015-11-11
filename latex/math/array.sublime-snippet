@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+\\begin{array}{${2:c}}
+$0${2/((?<=.)c|l|r)|./(?1: & )/g}
+\\end{array}
+]]></content>
+    <tabTrigger>array</tabTrigger>
+    <scope>text.tex.latex</scope>
+</snippet>

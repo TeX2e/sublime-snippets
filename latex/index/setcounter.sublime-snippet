@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\setcounter{tocdepth}{${1:2}}
+]]></content>
+	<tabTrigger>setcounter</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\newcommand{${1:\newname}}[${2:argnum}]{${3:macro #1}}
+]]></content>
+	<tabTrigger>newcommand</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

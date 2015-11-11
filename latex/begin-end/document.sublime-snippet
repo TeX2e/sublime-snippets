@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\begin{document}
+	${0:% your text goes here}
+\end{document}
+]]></content>
+	<tabTrigger>document</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

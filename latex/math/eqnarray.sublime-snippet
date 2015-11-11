@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\begin{eqnarray}
+	${0:% your equations goes here}
+\end{eqnarray}
+]]></content>
+	<tabTrigger>eqnarray</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

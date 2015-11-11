@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\textsf{${1:your text goes here}}
+]]></content>
+	<tabTrigger>textsf</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\begin{equation*}
+	${0:% your equation goes here}
+\end{equation*}
+]]></content>
+	<tabTrigger>equation</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\renewcommand{\labelenumi}{${1:(\arabic{enumi\})}}
+]]></content>
+	<tabTrigger>labelenumi</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

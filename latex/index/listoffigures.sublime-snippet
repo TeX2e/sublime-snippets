@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\listoffigures{}
+]]></content>
+	<tabTrigger>listoffigures</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

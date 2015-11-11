@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\cite{Label}
+]]></content>
+	<tabTrigger>cite</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

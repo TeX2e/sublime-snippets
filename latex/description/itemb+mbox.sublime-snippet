@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\item[${1:word}] \mbox{} \\\\
+	${0:% your text goes here}
+]]></content>
+	<tabTrigger>itembb</tabTrigger>
+	<scope>text.tex.latex</scope>
+	<description>\item[word]</description>
+</snippet>

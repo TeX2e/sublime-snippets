@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\makeindex{}
+]]></content>
+	<tabTrigger>makeindex</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\newenvironment{${1:name}}{${2:begin macro}}{${3:end macro}}
+]]></content>
+	<tabTrigger>newenvironment</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

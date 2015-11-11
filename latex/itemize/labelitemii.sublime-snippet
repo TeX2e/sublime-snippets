@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\renewcommand{\labelitemii}{${1:\$\triangleright\$}}
+]]></content>
+	<tabTrigger>labelitemii</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

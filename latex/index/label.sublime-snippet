@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\label{${1:typ}:${2:Label}}
+]]></content>
+	<tabTrigger>label</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

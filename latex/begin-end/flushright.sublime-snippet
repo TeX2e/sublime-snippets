@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\begin{flushright}
+	${0:% your text goes here}
+\end{flushright}
+]]></content>
+	<tabTrigger>flushright</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

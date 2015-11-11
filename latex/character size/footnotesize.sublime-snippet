@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+{\footnotesize $1}
+]]></content>
+	<tabTrigger>footnotesize</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\index{${1:読み方}@${2:索引語}}
+]]></content>
+	<tabTrigger>index</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

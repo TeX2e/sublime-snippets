@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\renewcommand{\labelenumiii}{${1:(\alph{enumi\})}}
+]]></content>
+	<tabTrigger>labelenumiii</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+\begin{table}
+	\centering
+	\caption{${1:Caption}}
+	\label{tab:${2:Label}}
+	\begin{tabular}{${3:c}} \\${4:toprule}
+		$0${3/((?<=.)c|l|r)|./(?1: & )/g} \\\\ \\${4:midrule}
+		${3/((?<=.)c|l|r)|./(?1: & )/g} \\\\
+		${3/((?<=.)c|l|r)|./(?1: & )/g} \\\\ \\${4:bottomrule}
+	\end{tabular}
+\end{table}
+]]></content>
+	<tabTrigger>table</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

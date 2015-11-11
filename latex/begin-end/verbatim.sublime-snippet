@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\begin{verbatim}
+	${0:% your text goes here}
+\end{verbatim}
+]]></content>
+	<tabTrigger>verbatim</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

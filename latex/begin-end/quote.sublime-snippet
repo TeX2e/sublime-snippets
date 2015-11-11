@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\begin{quote}
+	${0:% your text goes here}
+\end{quote}
+]]></content>
+	<tabTrigger>quote</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

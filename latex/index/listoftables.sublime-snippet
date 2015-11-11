@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\listoftables{}
+]]></content>
+	<tabTrigger>listoftables</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

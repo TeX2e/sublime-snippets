@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\pageref{${1:typ}:${2:Label}}
+]]></content>
+	<tabTrigger>pageref</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

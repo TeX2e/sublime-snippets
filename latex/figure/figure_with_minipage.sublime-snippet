@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+\begin{figure}
+	\begin{minipage}{0.5\hsize}
+		\begin{center}
+			\includegraphics[scale=${10:0.5}]{${20:filename}.eps}
+		\end{center}
+		\caption{${30:Caption}}
+		\label{fig:${31:Label}}
+	\end{minipage}
+	\begin{minipage}{0.5\hsize}
+		\begin{center}
+			\includegraphics[scale=${10:0.5}]{${20:filename}.eps}
+		\end{center}
+		\caption{${40:Caption}}
+		\label{fig:${41:Label}}
+	\end{minipage}
+\end{figure}
+]]></content>
+	<tabTrigger>figures</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

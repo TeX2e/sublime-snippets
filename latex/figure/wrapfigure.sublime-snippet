@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+\begin{wrapfigure}{${1:r}}{${2:10zw}}
+	\vspace*{-\intextsep}
+	\includegraphics[width=$2, clip]{${3:name.image}}
+\end{wrapfigure}
+]]></content>
+	<tabTrigger>wrapfigure</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>
+

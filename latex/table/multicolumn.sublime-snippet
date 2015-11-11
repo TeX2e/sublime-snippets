@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\multicolumn{${1:width}}{${2:c}}{${3:text}}
+]]></content>
+	<tabTrigger>multicolumn</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

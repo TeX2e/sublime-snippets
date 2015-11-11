@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+{\Huge $1}
+]]></content>
+	<tabTrigger>Huge</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+\begin{thebibliography}{9}
+\bibitem{${1:Label}}
+	${2:奥村晴彦 『LaTeX2e 美文書作成入門』
+	（技術評論社，2012）}$0
+\end{thebibliography}
+]]></content>
+	<tabTrigger>thebibliography</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

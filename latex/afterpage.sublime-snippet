@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\afterpage{${1:\clearpage}}
+]]></content>
+	<tabTrigger>afterpage</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

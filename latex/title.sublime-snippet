@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+\title{${1:Title}}
+\author{${2:Author}}
+\date{\today}
+\maketitle{}
+\begin{abstract}
+	${0:% your text goes here}
+\end{abstract}
+]]></content>
+	<tabTrigger>title</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>

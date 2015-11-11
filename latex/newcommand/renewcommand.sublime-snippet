@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\renewcommand{${1:\renewname}}{${2:macro}}
+]]></content>
+	<tabTrigger>renewcommand</tabTrigger>
+	<scope>text.tex.latex</scope>
+</snippet>
